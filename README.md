@@ -6,6 +6,6 @@ Laura Bukalo (LauraBukalo)
 
 Søs Wind (soswind)
 
-Sanne Lund Klüver (SanneKlyver
+Sanne Lund Klüver (SanneKlyver)
 
 Martin Høite (Blizz991)
