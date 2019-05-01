@@ -1,4 +1,5 @@
-# Gruppe eksamens projekt 2. semester på Multimediadesign Uddannelsen - Erhversakademi Aarhus
+# Gruppe eksamens projekt 2. semester
+# Multimediedesigner - Erhversakademi Aarhus
 
 **Gruppen består af:**
 
