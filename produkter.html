@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fair Trade Bazaren</title>
+    <title>Produkter - Fair Trade Bazaren</title>
     <meta name="description" content="???">
 
     <!-- Prevent robots from indexing this page, just in case they end up here from another link
@@ -18,12 +18,6 @@
     <!-- Get icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/MainStyle.css">
-    <style>
-        main {
-            /* Push content down so it's not behind the slider */
-            margin-top: calc(100vh - 60px);
-        }
-    </style>
 </head>
 
 <body>
@@ -44,153 +38,86 @@
             </div>
         </nav>
     </header>
-    <ul class="sidenav" id="mobile-demo" aria-hidden="true">
+    <ul class="sidenav" id="mobile-demo">
         <li><a href="produkter.html">Produkter</a></li>
         <li><a href="fair-trade.html">Fair trade</a></li>
         <li><a href="historie.html">Historie</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
-    <section class="slider fullscreen">
-        <ul class="slides">
-            <li>
-                <img
-                    src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                <!-- random image -->
-                <div class="caption center-align">
-                    <h1>This is our big Tagline!</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-            <li>
-                <img
-                    src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7">
-                <!-- random image -->
-                <div class="caption left-align">
-                    <h3>Left Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-            <li>
-                <img
-                    src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5">
-                <!-- random image -->
-                <div class="caption right-align">
-                    <h3>Right Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-        </ul>
-    </section>
     <main class="row">
-        <div class="col s9 hide-on-med-and-up">
-            <h2 class="center-align">Nyheder i butikken</h2>
-            <div class="carousel">
-                <a class="carousel-item" href="#one!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now"></a>
-                <a class="carousel-item" href="#two!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now""></a>
-                <a class=" carousel-item" href="#three!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now""></a>
-                <a class=" carousel-item" href="#four!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now""></a>
-                <a class=" carousel-item" href="#five!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now""></a>
+        <div class="col s12">
+            <h2>Produkter</h2>
+        </div>
+        <div class="col xl2">
+            <div class="card-panel white">
+                <h4>Filtre</h4>
+                <div class="input-field">
+                    <i class="material-icons prefix">search</i>
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Søg</label>
+                </div>
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Vis alle</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span>Tørklæder</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span>Måtter</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span>Hængekøjer</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span>Kurve</span>
+                    </label>
+                </p>
+
+                <h6>Max pris</h6>
+                <form action="#">
+                        <p class="range-field">
+                          <input type="range" id="priceSlider" min="0" max="945" />
+                        </p>
+                      </form>
             </div>
         </div>
-        <div class=" col s9">
-                    <div class="col s12">
-                        <h2 class="center-align">Nyheder i butikken</h2>
-                        <div class="row">
-                            <div class="col s4">
-                                <img class="materialboxed featured-product--img" width="475"
-                                    src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now">
-                            </div>
-                            <div class="col s4">
-                                <img class="materialboxed featured-product--img" width="475"
-                                    src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now">
-                            </div>
-                            <div class="col s4">
-                                <img class="materialboxed featured-product--img" width="475"
-                                    src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now">
-                            </div>
-                        </div>
-                    </div>
-                    <article>
-                        <div class="col s8 offset-s2 mt-30">
-                            <blockquote class="flow-text italic">
-                                <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati similique pariatur
-                                    repellat, aliquid labore, amet excepturi nam delectus eaque quas velit incidunt quis
-                                    corrupti blanditiis dolorum ipsum eum voluptates accusamus!</q>
 
-                            </blockquote>
-                        </div>
-                        <div class="col s8 offset-s2 mt-30">
-                            <h3>Fairtrade og fair trade</h3>
-                            <p class="flow-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cumque rerum ipsa
-                                perspiciatis, accusamus itaque hic sapiente voluptas error, voluptatem sunt praesentium.
-                                Iusto quod, enim accusamus dolore quia reprehenderit. Placeat.
-                                Mollitia non, minus obcaecati aspernatur sapiente et tempora eveniet cum officia
-                                repudiandae
-                                animi assumenda saepe quam odit vero. Facilis error laudantium fuga labore explicabo
-                                eius
-                                eveniet voluptas doloribus sint ab!
-                                Sapiente perspiciatis est deserunt excepturi neque aspernatur natus a, quo aliquam
-                                numquam,
-                                laboriosam tempore dolore, pariatur soluta tempora ducimus perferendis corrupti ipsam
-                                consectetur omnis placeat qui? Consequuntur perferendis voluptas vel?
-                                Obcaecati, aut adipisci perspiciatis dignissimos distinctio ducimus quia error incidunt
-                                accusantium, reprehenderit pariatur suscipit maiores tempora explicabo! Reprehenderit,
-                                ex
-                                doloremque fugit perspiciatis quaerat quae atque voluptates ea corporis rem autem.
-                            </p>
-                        </div>
-                    </article>
-            </div>
-            <div class="col s3">
-                <div class="newsletter-section col s12">
-                    <h4>Tilmeld nyhedsbrev</h4>
-                    <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                        <span class="helper-text" data-error="Indtast venlgist en valid mail"
-                            data-success="Dette er en valid email">Indtast din email for at blive opskrevet</span>
-                        <button class="btn waves-effect waves-light mt-15" type="submit" name="action">Opskriv
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                </div>
-                <div class="newsletter-section col s12 parent">
-                    <a href="#">
-                        <img class="latest-newsletters-img" src="https://via.placeholder.com/400x225?text=s" />
-                        <div class="centered-content">
-                            <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                            <h6 class="latest-newsletters-header">Maj 2019</h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="newsletter-section col s12 parent">
-                    <a href="#">
-                        <img class="latest-newsletters-img" src="https://via.placeholder.com/400x225?text=s" />
-                        <div class="centered-content">
-                            <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                            <h6 class="latest-newsletters-header">April 2019</h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="newsletter-section col s12 parent">
-                    <a href="#">
-                        <img class="latest-newsletters-img" src="https://via.placeholder.com/400x225?text=s" />
-                        <div class="centered-content">
-                            <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                            <h6 class="latest-newsletters-header">Marts 2019</h6>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- <div class="col s12">
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex modal-trigger"
+                width="256" data-target="modal1"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
+        <div class="col xl2 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex" width="256"></div>
 
-            </div> -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
     </main>
 
     <footer class="page-footer">
@@ -309,16 +236,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Slim version hvis vi ikke har behov for alle funktionerne -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Our javascript -->
     <script src="js/MainScript.js"></script>
     <script>
-        //Initialize Materialize CSS components used on this page
         $(document).ready(function () {
-            $('.slider').slider();
-            $('.carousel').carousel();
-            $('.materialboxed').materialbox();
+            $('.modal').modal();
+
+            //Make max slide default to max
+            $('#priceSlider').val(945);
+            //TODO: Usability!
         });
     </script>
 </body>

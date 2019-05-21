@@ -1,8 +1,4 @@
-main {
-    /* position: relative;
-    top: calc(100vh - 84px); */
-    margin-top: calc(100vh - 60px);
-}
+
 
 /* .slider .slides li .caption {
     border-radius: 10px;
@@ -13,8 +9,26 @@ main {
     width:auto;
 } */
 
+nav .brand-logo {
+    display: inline-block;
+    height: 100%;
+}
+
+nav .brand-logo>img {
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+nav .sidenav-trigger{
+    float: right;
+}
+
 .featured-product--img {
     padding: 0 15px;
+}
+
+.mt-45{
+    margin-top:45px;
 }
 
 .mt-30 {
@@ -31,6 +45,14 @@ main {
 
 .mr-5{
     margin-right:5px;
+}
+
+.m-a{
+    margin:auto;
+}
+
+.d-flex{
+    display:flex;
 }
 
 .italic {
@@ -68,7 +90,7 @@ main {
 
 .footer__open-times {
     margin: auto;
-    width: 50%;
+    width: 80%;
     /* text-align: center; */
     display: flex;
     flex-wrap: wrap;
@@ -86,4 +108,11 @@ main {
 
 .footer-links:hover{
     color:yellow;
+}
+
+
+/* Materialize CSS Overrides */
+
+.modal-trigger{
+    cursor:pointer;
 }

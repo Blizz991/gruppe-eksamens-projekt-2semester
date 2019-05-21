@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    $('.carousel').carousel();
-    $('.slider').slider();
-    $('.materialboxed').materialbox();
+    $('.sidenav').sidenav({
+        edge: 'right'
+    });
+    $('.tooltipped').tooltip();
 });
 
 // $('.carousel.carousel-slider').carousel({
