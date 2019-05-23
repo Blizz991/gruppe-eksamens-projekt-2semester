@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Produkter - Fair Trade Bazaren</title>
+    <title>Kontakt - Fair Trade Bazaren</title>
     <meta name="description" content="???">
 
     <!-- Prevent robots from indexing this page, just in case they end up here from another link
@@ -44,79 +44,63 @@
         <li><a href="om-os.html">Historie</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
+    <!-- TODO:Make responsive -->
     <main class="row">
-        <div class="col s12">
-            <h2>Produkter</h2>
+        <div class="col l11 offset-l1 s12">
+            <h1>Kontakt</h1>
         </div>
-        <div class="col xl2">
-            <div class="card-panel white">
-                <h4>Filtre</h4>
-                <div class="input-field">
-                    <i class="material-icons prefix">search</i>
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Søg</label>
+        <div class="col l5 offset-l1 s12">
+            <h3>Skriv til os</h3>
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Textarea</label>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+        <div class="col l5 offset-l1 s12">
+            <h4>Kontakt</h4>
+            <div class="col s12 flow-text">
+            <address>
+                <span class="bold">Fair Trade Butik Bazaren</span> <br>
+                Guldsmedgade 8A, <br>
+                8000 Aarhus
+            </address>
+        </div>
+            <div class="col s12 mt-15">
+                <div class="valign-wrapper">
+                    <i class="material-icons mr-5">local_phone</i>
+                    <a href="tel:86 18 51 11">86 18 51 11</a>
                 </div>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in" checked="checked" />
-                        <span>Vis alle</span>
-                    </label>
+            </div>
+            <div class="col s12">
+                <div class="valign-wrapper">
+                    <i class="material-icons mr-5">email</i>
+                    <a href="mailto:bazaren@fairbutik.dk">bazaren@fairbutik.dk</a>
+                </div>
+            </div>
+            <div class="col s12">
+                <h4>Åbningstider</h4>
+                <p class="flow-text">
+                    Man - Tors 10 - 17.30 <br>
+                    Fre 10 - 18 <br>
+                    Lør 10 - 16 <br>
                 </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in" />
-                        <span>Tørklæder</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in" />
-                        <span>Måtter</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in" />
-                        <span>Hængekøjer</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in" />
-                        <span>Kurve</span>
-                    </label>
-                </p>
-
-                <h6>Max pris</h6>
-                <form action="#">
-                        <p class="range-field">
-                          <input type="range" id="priceSlider" min="0" max="945" />
-                        </p>
-                      </form>
+                <img src="images/FindUsOn_Header_2019-400x74.png" alt="Find os på Facebook" width="200" class="responsive-img">
             </div>
         </div>
-
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex modal-trigger responsive-img"
-                width="256" data-target="modal1"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-        <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt="" class="m-a d-flex responsive-img" width="256"></div>
-
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
+        <div class="col s12 mt-30">
+            <!-- TODO: Make responsive -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.926178280339!2d10.205307716266672!3d56.15838098066386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f9420262827%3A0x9db0e4d5e0e6cc41!2sFair+Trade+Shop+Bazaar!5e0!3m2!1sen!2sdk!4v1558602524860!5m2!1sen!2sdk"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </main>
 
@@ -181,15 +165,6 @@
                 </div>
                 <div class="col xl3 l3 m6 offset-m3 s12">
                     <h4 class="white-text center-align">Åbningstider</h4>
-                    <!-- <ul class="footer__open-times">
-                        <li>Mandag 10.00 - 17.30</li>
-                        <li>Tirsdag 10.00 - 17.30</li>
-                        <li>Onsdag 10.00 - 17.30</li>
-                        <li>Torsdag 10.00 - 17.30</li>
-                        <li>Fredag 10.00 - 18.00</li>
-                        <li>Lørdag 10.00 - 16.00</li>
-                        <li>Søndag Lukket</li>
-                    </ul> -->
                     <ul class="footer__open-times">
                         <li><span class="mr-a">Mandag</span>10.00 - 17.30</li>
                         <li><span class="mr-a">Tirsdag</span>10.00 - 17.30</li>
@@ -234,23 +209,10 @@
     </footer>
     <!-- Her kunne vi evt. have brugt slim versionen -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Slim version hvis vi ikke har behov for alle funktionerne -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Our javascript -->
     <script src="js/MainScript.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.modal').modal();
-
-            //Make max slide default to max
-            $('#priceSlider').val(945);
-            //TODO: Usability!
-        });
-    </script>
 </body>
 
 </html>

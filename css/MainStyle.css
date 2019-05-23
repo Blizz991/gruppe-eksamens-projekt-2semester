@@ -71,6 +71,12 @@ nav .sidenav-trigger{
 
 /* #endregion Landing Page CSS */
 
+/* #region History */
+.history-text{
+    margin:0;
+}
+/* #endregion History */
+
 /* #region Helpers */
 .mt-45{
     margin-top:45px;
@@ -90,6 +96,10 @@ nav .sidenav-trigger{
 
 .mr-5{
     margin-right:5px;
+}
+
+.my-15{
+    margin:15px auto;
 }
 
 .m-a{
@@ -127,8 +137,10 @@ nav .sidenav-trigger{
 /* #endregion Helpers */
 
 
-/* Materialize CSS Overrides */
+/* #region Materialize CSS Overrides */
 
 .modal-trigger{
     cursor:pointer;
 }
+
+/* #endregion Materialize CSS Overrides  */
