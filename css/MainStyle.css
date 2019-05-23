@@ -37,6 +37,10 @@ nav .sidenav-trigger {
     width: 100%;
 }
 
+.footer-links-container > li{
+    padding:5px 0;
+}
+
 .footer-links {
     color: #fff;
     text-decoration: underline;
