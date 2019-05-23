@@ -102,15 +102,15 @@
                         <h2 class="center-align">Nyheder i butikken</h2>
                         <div class="row">
                             <div class="col s4">
-                                <img class="materialboxed featured-product--img" width="475"
+                                <img class="materialboxed featured-product-img responsive-img"
                                     src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now">
                             </div>
                             <div class="col s4">
-                                <img class="materialboxed featured-product--img" width="475"
+                                <img class="materialboxed featured-product-img responsive-img"
                                     src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now">
                             </div>
                             <div class="col s4">
-                                <img class="materialboxed featured-product--img" width="475"
+                                <img class="materialboxed featured-product-img responsive-img"
                                     src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now">
                             </div>
                         </div>
@@ -153,40 +153,55 @@
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate">
                         <label for="email">Email</label>
-                        <span class="helper-text" data-error="Indtast venlgist en valid mail"
+                        <span class="helper-text" data-error="Indtast venligst en valid mail"
                             data-success="Dette er en valid email">Indtast din email for at blive opskrevet</span>
                         <button class="btn waves-effect waves-light mt-15" type="submit" name="action">Opskriv
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
+                    <h5 class="previous-newsletters-header">Forrige nyhedsbreve</h5>
                 </div>
-                <div class="newsletter-section col s12 parent">
-                    <a href="#">
-                        <img class="latest-newsletters-img" src="https://via.placeholder.com/400x225?text=s" />
-                        <div class="centered-content">
-                            <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                            <h6 class="latest-newsletters-header">Maj 2019</h6>
+                <ul id="previousNewslettersCollapsible" class="collapsible expandable mt-15">
+                    <li class="active">
+                        <div class="collapsible-header"><i class="material-icons">mail_outline</i>Maj 2019</div>
+                        <div class="collapsible-body newsletter-section parent">
+                            <a href="#">
+                                <img class="latest-newsletters-img responsive-img"
+                                    src="https://via.placeholder.com/400x225?text=s" />
+                                <!-- <div class="centered-content">
+                                    <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
+                                    <h6 class="latest-newsletters-header">Maj 2019</h6>
+                                </div> -->
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="newsletter-section col s12 parent">
-                    <a href="#">
-                        <img class="latest-newsletters-img" src="https://via.placeholder.com/400x225?text=s" />
-                        <div class="centered-content">
-                            <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                            <h6 class="latest-newsletters-header">April 2019</h6>
+                    </li>
+                    <li class="active">
+                        <div class="collapsible-header"><i class="material-icons">mail_outline</i>April 2019</div>
+                        <div class="collapsible-body newsletter-section parent">
+                            <a href="#">
+                                <img class="latest-newsletters-img responsive-img"
+                                    src="https://via.placeholder.com/400x225?text=s" />
+                                <!-- <div class="centered-content">
+                                    <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
+                                    <h6 class="latest-newsletters-header">April 2019</h6>
+                                </div> -->
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="newsletter-section col s12 parent">
-                    <a href="#">
-                        <img class="latest-newsletters-img" src="https://via.placeholder.com/400x225?text=s" />
-                        <div class="centered-content">
-                            <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                            <h6 class="latest-newsletters-header">Marts 2019</h6>
+                    </li>
+                    <li class="active">
+                        <div class="collapsible-header"><i class="material-icons">mail_outline</i>Marts 2019</div>
+                        <div class="collapsible-body newsletter-section parent">
+                            <a href="#">
+                                <img class="latest-newsletters-img responsive-img"
+                                    src="https://via.placeholder.com/400x225?text=s" />
+                                <!-- <div class="centered-content">
+                                    <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
+                                    <h6 class="latest-newsletters-header">Marts 2019</h6>
+                                </div> -->
+                            </a>
                         </div>
-                    </a>
-                </div>
+                    </li>
+                </ul>
             </div>
             <!-- <div class="col s12">
 
@@ -319,6 +334,29 @@
             $('.slider').slider();
             $('.carousel').carousel();
             $('.materialboxed').materialbox();
+            $('.collapsible').collapsible({
+                accordion: false
+            });
+
+            var newsletterCollapsibleInstance = M.Collapsible.getInstance($('#previousNewslettersCollapsible'));
+
+            console.log(newsletterCollapsibleInstance);
+
+            // if ($(window).width() < 900) {
+            //     $("#previousNewslettersCollapsible").removeClass('active');
+            // }
+
+        });
+
+
+        $(window).resize(function () {
+            clearTimeout(window.resizedFinished);
+            window.resizedFinished = setTimeout(function () {
+                if ($(window).width() < 900) {
+                    // $("#previousNewslettersCollapsible").removeClass('active');
+                    newsletterCollapsibleInstance.close(2);
+                }
+            }, 250);
         });
     </script>
 </body>

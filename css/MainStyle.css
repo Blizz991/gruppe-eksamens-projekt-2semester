@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,600&display=swap');
 
 /* .slider .slides li .caption {
     border-radius: 10px;
@@ -9,6 +9,7 @@
     width:auto;
 } */
 
+/* #region Global CSS */
 nav .brand-logo {
     display: inline-block;
     height: 100%;
@@ -23,10 +24,54 @@ nav .sidenav-trigger{
     float: right;
 }
 
+.footer__open-times {
+    margin: auto;
+    width: 80%;
+    /* text-align: center; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__open-times>li{
+    display:flex;
+    width:100%;
+}
+
+.footer-links{
+    color:#fff;
+    text-decoration: underline;
+}
+
+.footer-links:hover{
+    color:yellow;
+}
+
+/* #endregion Global CSS */
+
+
+/* #region Landing Page CSS */
 .featured-product--img {
     padding: 0 15px;
 }
 
+.newsletter-section {
+    /* border: 1px solid pink; */
+    padding:0;
+}
+
+.latest-newsletters-img {
+    padding: 15px;
+    margin-top: 7px;
+}
+
+.latest-newsletters-header {
+    /* width:50%; */
+    text-align: center;
+}
+
+/* #endregion Landing Page CSS */
+
+/* #region Helpers */
 .mt-45{
     margin-top:45px;
 }
@@ -55,28 +100,6 @@ nav .sidenav-trigger{
     display:flex;
 }
 
-.italic {
-    font-style: italic;
-}
-
-.bold{
-    font-weight: bold;
-}
-
-.newsletter-section {
-    border: 1px solid pink;
-}
-
-.latest-newsletters-img {
-    padding: 15px;
-    margin-top: 7px;
-}
-
-.latest-newsletters-header {
-    /* width:50%; */
-    text-align: center;
-}
-
 .parent {
     position: relative;
 }
@@ -88,27 +111,20 @@ nav .sidenav-trigger{
     transform: translate(-50%, -50%);
 }
 
-.footer__open-times {
-    margin: auto;
-    width: 80%;
-    /* text-align: center; */
-    display: flex;
-    flex-wrap: wrap;
+.responsive-img{
+    max-width:100%;
+    height:auto;
+}
+/* #region Typography */
+.italic {
+    font-style: italic;
 }
 
-.footer__open-times>li{
-    display:flex;
-    width:100%;
+.bold{
+    font-weight: bold;
 }
-
-.footer-links{
-    color:#fff;
-    text-decoration: underline;
-}
-
-.footer-links:hover{
-    color:yellow;
-}
+/* #endregion Typography */
+/* #endregion Helpers */
 
 
 /* Materialize CSS Overrides */
