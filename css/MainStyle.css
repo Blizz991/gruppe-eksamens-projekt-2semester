@@ -20,7 +20,7 @@ nav .brand-logo>img {
     margin-bottom: 10px;
 }
 
-nav .sidenav-trigger{
+nav .sidenav-trigger {
     float: right;
 }
 
@@ -32,18 +32,18 @@ nav .sidenav-trigger{
     flex-wrap: wrap;
 }
 
-.footer__open-times>li{
-    display:flex;
-    width:100%;
+.footer__open-times>li {
+    display: flex;
+    width: 100%;
 }
 
-.footer-links{
-    color:#fff;
+.footer-links {
+    color: #fff;
     text-decoration: underline;
 }
 
-.footer-links:hover{
-    color:yellow;
+.footer-links:hover {
+    color: yellow;
 }
 
 /* #endregion Global CSS */
@@ -56,7 +56,7 @@ nav .sidenav-trigger{
 
 .newsletter-section {
     /* border: 1px solid pink; */
-    padding:0;
+    padding: 0;
 }
 
 .latest-newsletters-img {
@@ -72,14 +72,15 @@ nav .sidenav-trigger{
 /* #endregion Landing Page CSS */
 
 /* #region History */
-.history-text{
-    margin:0;
+.history-text {
+    margin: 0;
 }
+
 /* #endregion History */
 
 /* #region Helpers */
-.mt-45{
-    margin-top:45px;
+.mt-45 {
+    margin-top: 45px;
 }
 
 .mt-30 {
@@ -90,24 +91,24 @@ nav .sidenav-trigger{
     margin-top: 15px;
 }
 
-.mr-a{
-    margin-right:auto;
+.mr-a {
+    margin-right: auto;
 }
 
-.mr-5{
-    margin-right:5px;
+.mr-5 {
+    margin-right: 5px;
 }
 
-.my-15{
-    margin:15px auto;
+.my-15 {
+    margin: 15px auto;
 }
 
-.m-a{
-    margin:auto;
+.m-a {
+    margin: auto;
 }
 
-.d-flex{
-    display:flex;
+.d-flex {
+    display: flex;
 }
 
 .parent {
@@ -121,26 +122,51 @@ nav .sidenav-trigger{
     transform: translate(-50%, -50%);
 }
 
-.responsive-img{
-    max-width:100%;
-    height:auto;
+.responsive-img {
+    max-width: 100%;
+    height: auto;
 }
+
+.google-maps-container{
+    padding-bottom:20%;
+}
+
 /* #region Typography */
 .italic {
     font-style: italic;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
+
 /* #endregion Typography */
 /* #endregion Helpers */
 
 
 /* #region Materialize CSS Overrides */
 
-.modal-trigger{
-    cursor:pointer;
+.modal-trigger {
+    cursor: pointer;
+}
+
+textarea.materialize-textarea {
+    height: 6rem;
+    border:1px solid #9e9e9e;
+    margin-top:10px;
+    padding:10px;
+}
+
+textarea.materialize-textarea:focus{
+    border: 1px solid #26a69a;
+}
+
+.text-area-label{
+    margin-left:10px;
+}
+
+.input-field > .active{
+    margin-left:0;
 }
 
 /* #endregion Materialize CSS Overrides  */
