@@ -25,26 +25,26 @@
         }
     </style>
 </head>
-
-<body>
-    <header class="row navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <div class="col s12">
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <a href="index.html" class="brand-logo"><img src="https://placehold.it/155x46"> <span
-                            class="hide-on-med-and-down">Fair Trade Bazaren</span></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="produkter.html">Produkter</a></li>
-                        <li><a href="fair-forskelle.html">Fair trade</a></li>
-                        <li><a href="om-os.html">Om os</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </div>
+<header class="row navbar-fixed">
+    <nav class="green darken-3">
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="index.html" class="brand-logo"><img class="responsive-img" src="images/logofairtrade.PNG">
+                    <span class="hide-on-med-and-down">Fair Trade Bazaren</span></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="produkter.html">Produkter</a></li>
+                    <li><a href="fair-forskelle.html">Fair trade</a></li>
+                    <li><a href="om-os.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
-    <ul class="sidenav" id="mobile-demo" aria-hidden="true">
+        </div>
+    </nav>
+</header>
+
+<body class="green lighten-5">
+    <ul class="sidenav green-dark-3" id="mobile-demo" aria-hidden="true">
         <li><a href="produkter.html">Produkter</a></li>
         <li><a href="fair-forskelle.html">Fair trade</a></li>
         <li><a href="om-os.html">Historie</a></li>
@@ -53,30 +53,28 @@
     <section class="slider fullscreen">
         <ul class="slides">
             <li>
-                <img
-                    src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                <!-- random image -->
+                <img src="images/frontpage/butikken.png" alt="" title="">
                 <div class="caption center-align">
-                    <h1>This is our big Tagline!</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <h1>Fair Trade Butik - Bazaren</h1>
+                    <h5 class="">Sætter mennesket i centrum</h5>
                 </div>
             </li>
             <li>
-                <img
-                    src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7">
+                <img src="images/frontpage/slider-kurve_1920x1080.jpg" alt="" title="">
                 <!-- random image -->
                 <div class="caption left-align">
                     <h3>Left Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <h5 class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, a iusto eius doloremque,
+                        voluptates eos, fugiat quia sunt quasi nobis consequatur? Nulla unde sint optio autem sed
+                        veniam, quod veritatis.</h5>
                 </div>
             </li>
             <li>
-                <img
-                    src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5">
+                <img src="images/frontpage/slider-haengekoeje_1920x1080.jpg">
                 <!-- random image -->
                 <div class="caption right-align">
                     <h3>Right Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <h5 class="">Here's our small slogan.</h5>
                 </div>
             </li>
         </ul>
@@ -165,7 +163,8 @@
                     <li class="active">
                         <div class="collapsible-header"><i class="material-icons">mail_outline</i>Maj 2019</div>
                         <div class="collapsible-body newsletter-section parent">
-                            <a href="#">
+                            <a class="modal-trigger" data-target="newsletterModal" href="#!" data-newsletter-month="Maj"
+                                data-newsletter-year="2019">
                                 <img class="latest-newsletters-img responsive-img"
                                     src="https://via.placeholder.com/400x225?text=s" />
                                 <!-- <div class="centered-content">
@@ -178,7 +177,8 @@
                     <li class="active">
                         <div class="collapsible-header"><i class="material-icons">mail_outline</i>April 2019</div>
                         <div class="collapsible-body newsletter-section parent">
-                            <a href="#">
+                            <a class="modal-trigger" data-target="newsletterModal" href="#!" data-newsletter-month="April"
+                                data-newsletter-year="2019">
                                 <img class="latest-newsletters-img responsive-img"
                                     src="https://via.placeholder.com/400x225?text=s" />
                                 <!-- <div class="centered-content">
@@ -191,7 +191,8 @@
                     <li class="active">
                         <div class="collapsible-header"><i class="material-icons">mail_outline</i>Marts 2019</div>
                         <div class="collapsible-body newsletter-section parent">
-                            <a href="#">
+                            <a class="modal-trigger" data-target="newsletterModal" href="#!" data-newsletter-month="Marts"
+                            data-newsletter-year="2019">
                                 <img class="latest-newsletters-img responsive-img"
                                     src="https://via.placeholder.com/400x225?text=s" />
                                 <!-- <div class="centered-content">
@@ -203,116 +204,118 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="col s12">
-
-            </div> -->
-    </main>
-
-    <footer class="page-footer">
-        <div class="">
-            <div class="row">
-                <div class="col xl6 l6 m6 offset-m3 s12">
-                    <div class="col xl4">
-                        <h5 class="white-text center-align">Leverandører</h5>
-                        <ul class="footer-links-container">
-                            <li class="center-align">
-                                <a class="grey-text text-lighten-3 tooltipped" href="http://fair-trade-gruppen.dk"
-                                    data-position="bottom"
-                                    data-tooltip="Fair Trade varer fra Bangladesh, Chile og flere andre lande"
-                                    target="_blank"
-                                    aria-label="Fair Trade varer fra Bangladesh, Chile og flere andre lande">
-                                    Fair Trade Gruppen
-                                </a>
-                            </li>
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.el-puente.de/" data-position="bottom"
-                                    data-tooltip="Fair Trade varer fra mange andre lande" target="_blank"
-                                    aria-label="Fair Trade varer fra mange andre lande">El Puente, Tyskland</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.contigo.de/" data-position="bottom"
-                                    data-tooltip="Eksklusive Fair Trade varer fra mange lande" target="_blank"
-                                    aria-label="Eksklusive Fair Trade varer fra mange lande">Contigo, Tyskland</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.fair-trade-gruppen.dk/" data-position="bottom"
-                                    data-tooltip="Import og salg af Fair Trade handicraft fra Bangladesh m.m."
-                                    target="_blank"
-                                    aria-label="Import og salg af Fair Trade handicraft fra Bangladesh m.m.">U-landsforeningerne
-                                    Svalerne</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.svalerne.dk/" data-position="bottom"
-                                    data-tooltip="Landsorganisationen" target="_blank"
-                                    aria-label="Landsorganisationen">U-landsforeningen Svalerne, landsorganisationen</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div class="col xl4">
-                        <h5 class="white-text center-align">Producenter</h5>
-                        <ul class="footer-links-container">
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.cjwbd.com/" data-position="bottom"
-                                    data-tooltip="En producent fra Bangladesh, der arbejder med råvarer m.m."
-                                    target="_blank"
-                                    aria-label="En producent fra Bangladesh, der arbejder med råvarer m.m.">CORR-The
-                                    Jute Works, Bangladesh</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.dhakahandicrafts.com/" data-position="bottom"
-                                    data-tooltip="En producent fra Bangladesh" target="_blank"
-                                    aria-label="En producent fra Bangladesh">Dhaka Handicrafts, Bangladesh</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.prokritee.com/" data-position="bottom"
-                                    data-tooltip="En producent fra Bangladesh" target="_blank"
-                                    aria-label="En producent fra Bangladesh">Prokritee, Bangladesh</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.pupbd.org/" data-position="bottom"
-                                    data-tooltip="En producent fra Bangladesh" target="_blank"
-                                    aria-label="En producent fra Bangladesh">Polle Unnyon Prokolpo, Bangladesh</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.comparte.cl/" data-position="bottom"
-                                    data-tooltip="En producent fra Chile" target="_blank"
-                                    aria-label="En producent fra Chile">Comparte, Chile</a></li>
-
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.cholchol.org/" data-position="bottom"
-                                    data-tooltip="En producent fra Chile" target="_blank"
-                                    aria-label="En producent fra Chile">Fundacion Chol-Chol, Chile</a></li>
-                        </ul>
-                    </div>
-                    <div class="col xl4">
-                        <h5 class="white-text center-align">Organisationer</h5>
-                        <ul class="footer-links-container">
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.wfto.com/" data-position="bottom"
-                                    data-tooltip="Sammenslutning af Fair Trade producenter, importører, butikker og andre med interesse for Fair Trade"
-                                    target="_blank"
-                                    aria-label="Sammenslutning af Fair Trade producenter, importører, butikker og andre med interesse for Fair Trade">WFTO.
-                                    World Fair Trade Organization</a></li>
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.eftafairtrade.org/" data-position="bottom"
-                                    data-tooltip="Sammenslutning af en række store europæiske Fair Trade importører"
-                                    target="_blank"
-                                    aria-label="Sammenslutning af en række store europæiske Fair Trade importører">EFTA.
-                                    European Fair Trade Association</a></li>
-                            <li class="center-align"><a class="grey-text text-lighten-3 tooltipped"
-                                    href="http://www.fairtrade.net/" data-position="bottom"
-                                    data-tooltip="Sammenslutning af Fair Trade mærkningsorganisationer" target="_blank"
-                                    aria-label="Sammenslutning af Fair Trade mærkningsorganisationer">FLO. Fairtrade
-                                    Labelling Organizations International</a></li>
-
-                        </ul>
-                    </div>
+            <template id="newsletterTemplate">
+                <h4>##newsletterModalHeader##</h4>
+                <img class="responsive-img" src="##newsletterImgPath##" alt="">
+            </template>
+            <div id="newsletterModal" class="modal modal-fixed-footer" aria-hidden="true">
+                <div id="newsletterModalContent" class="modal-content">
 
                 </div>
-                <div class="col xl3 l3 m6 offset-m3 s12">
-                    <h4 class="white-text center-align">Åbningstider</h4>
-                    <!-- <ul class="footer__open-times">
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close red btn-small modal-action modal-close btn-flat">Luk</a>
+                </div>
+            </div>
+    </main>
+
+    <footer class="page-footer green darken-2">
+        <div class="row">
+            <div class="col xl6 l6 m6 offset-m3 s12">
+                <div class="col xl4">
+                    <h5 class="white-text center-align">Leverandører</h5>
+                    <ul class="footer-links-container">
+                        <li class="center-align">
+                            <a class="footer-links tooltipped" href="http://fair-trade-gruppen.dk" data-position="top"
+                                data-tooltip="Fair Trade varer fra Bangladesh, Chile og flere andre lande"
+                                target="_blank"
+                                aria-label="Fair Trade varer fra Bangladesh, Chile og flere andre lande">
+                                Fair Trade Gruppen
+                            </a>
+                        </li>
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.el-puente.de/"
+                                data-position="top" data-tooltip="Fair Trade varer fra mange andre lande"
+                                target="_blank" aria-label="Fair Trade varer fra mange andre lande">El Puente,
+                                Tyskland</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.contigo.de/"
+                                data-position="top" data-tooltip="Eksklusive Fair Trade varer fra mange lande"
+                                target="_blank" aria-label="Eksklusive Fair Trade varer fra mange lande">Contigo,
+                                Tyskland</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped"
+                                href="http://www.fair-trade-gruppen.dk/" data-position="top"
+                                data-tooltip="Import og salg af Fair Trade handicraft fra Bangladesh m.m."
+                                target="_blank"
+                                aria-label="Import og salg af Fair Trade handicraft fra Bangladesh m.m.">U-landsforeningerne
+                                Svalerne</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.svalerne.dk/"
+                                data-position="top" data-tooltip="Landsorganisationen" target="_blank"
+                                aria-label="Landsorganisationen">U-landsforeningen Svalerne, landsorganisationen</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col xl4">
+                    <h5 class="white-text center-align">Producenter</h5>
+                    <ul class="footer-links-container">
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.cjwbd.com/"
+                                data-position="top"
+                                data-tooltip="En producent fra Bangladesh, der arbejder med råvarer m.m."
+                                target="_blank"
+                                aria-label="En producent fra Bangladesh, der arbejder med råvarer m.m.">CORR-The
+                                Jute Works, Bangladesh</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped"
+                                href="http://www.dhakahandicrafts.com/" data-position="top"
+                                data-tooltip="En producent fra Bangladesh" target="_blank"
+                                aria-label="En producent fra Bangladesh">Dhaka Handicrafts, Bangladesh</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.prokritee.com/"
+                                data-position="top" data-tooltip="En producent fra Bangladesh" target="_blank"
+                                aria-label="En producent fra Bangladesh">Prokritee, Bangladesh</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.pupbd.org/"
+                                data-position="top" data-tooltip="En producent fra Bangladesh" target="_blank"
+                                aria-label="En producent fra Bangladesh">Polle Unnyon Prokolpo, Bangladesh</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.comparte.cl/"
+                                data-position="top" data-tooltip="En producent fra Chile" target="_blank"
+                                aria-label="En producent fra Chile">Comparte, Chile</a></li>
+
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.cholchol.org/"
+                                data-position="top" data-tooltip="En producent fra Chile" target="_blank"
+                                aria-label="En producent fra Chile">Fundacion Chol-Chol, Chile</a></li>
+                    </ul>
+                </div>
+                <div class="col xl4">
+                    <h5 class="white-text center-align">Organisationer</h5>
+                    <ul class="footer-links-container">
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.wfto.com/"
+                                data-position="top"
+                                data-tooltip="Sammenslutning af Fair Trade producenter, importører, butikker og andre med interesse for Fair Trade"
+                                target="_blank"
+                                aria-label="Sammenslutning af Fair Trade producenter, importører, butikker og andre med interesse for Fair Trade">WFTO.
+                                World Fair Trade Organization</a></li>
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.eftafairtrade.org/"
+                                data-position="top"
+                                data-tooltip="Sammenslutning af en række store europæiske Fair Trade importører"
+                                target="_blank"
+                                aria-label="Sammenslutning af en række store europæiske Fair Trade importører">EFTA.
+                                European Fair Trade Association</a></li>
+                        <li class="center-align"><a class="footer-links tooltipped" href="http://www.fairtrade.net/"
+                                data-position="top" data-tooltip="Sammenslutning af Fair Trade mærkningsorganisationer"
+                                target="_blank" aria-label="Sammenslutning af Fair Trade mærkningsorganisationer">FLO.
+                                Fairtrade
+                                Labelling Organizations International</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col xl3 l3 m6 offset-m3 s12">
+                <h4 class="white-text center-align">Åbningstider</h4>
+                <!-- <ul class="footer__open-times">
                         <li>Mandag 10.00 - 17.30</li>
                         <li>Tirsdag 10.00 - 17.30</li>
                         <li>Onsdag 10.00 - 17.30</li>
@@ -321,37 +324,41 @@
                         <li>Lørdag 10.00 - 16.00</li>
                         <li>Søndag Lukket</li>
                     </ul> -->
-                    <ul class="footer__open-times">
-                        <li><span class="mr-a">Mandag</span>10.00 - 17.30</li>
-                        <li><span class="mr-a">Tirsdag</span>10.00 - 17.30</li>
-                        <li><span class="mr-a">Onsdag</span>10.00 - 17.30</li>
-                        <li><span class="mr-a">Torsdag</span>10.00 - 17.30</li>
-                        <li><span class="mr-a">Fredag</span>10.00 - 18.00</li>
-                        <li><span class="mr-a">Lørdag</span>10.00 - 16.00</li>
-                        <li><span class="mr-a">Søndag</span>Lukket</li>
-                    </ul>
-                </div>
-                <div class="col xl3 l3 m6 offset-m3 s12">
-                    <h4 class="white-text center-align">Kontakt</h4>
-                    <div class="col l7 offset-l3 m8 offset-m2 s12">
-                        <div class="col s12">
-                            <adress class="grey-text text-lighten-4">
-                                <span class="bold">Fair Trade Bazaren</span> <br>
-                                Guldsmedegade 8a <br>
-                                8000 Aarhus C <br>
-                            </adress>
+                <ul class="footer__open-times">
+                    <li><span class="mr-a">Mandag</span>10.00 - 17.30</li>
+                    <li><span class="mr-a">Tirsdag</span>10.00 - 17.30</li>
+                    <li><span class="mr-a">Onsdag</span>10.00 - 17.30</li>
+                    <li><span class="mr-a">Torsdag</span>10.00 - 17.30</li>
+                    <li><span class="mr-a">Fredag</span>10.00 - 18.00</li>
+                    <li><span class="mr-a">Lørdag</span>10.00 - 16.00</li>
+                    <li><span class="mr-a">Søndag</span>Lukket</li>
+                </ul>
+            </div>
+            <div class="col xl3 l3 m6 offset-m3 s12">
+                <h4 class="white-text center-align">Kontakt</h4>
+                <div class="col l7 offset-l3 m8 offset-m2 s12">
+                    <div class="col s12">
+                        <adress class="grey-text text-lighten-4">
+                            <span class="bold">Fair Trade Bazaren</span> <br>
+                            Guldsmedegade 8a <br>
+                            8000 Aarhus C <br>
+                        </adress>
+                    </div>
+                    <div class="col s12">
+                        <div class="valign-wrapper">
+                            <i class="material-icons mr-5">local_phone</i>
+                            <a class="footer-links tooltipped" href="tel:86 18 51 11" data-position="top"
+                                data-tooltip="Du er velkommen til at ringe til os"
+                                aria-label="Du er velkommen til at ringe til os">86 18 51 11</a>
                         </div>
-                        <div class="col s12">
-                            <div class="valign-wrapper">
-                                <i class="material-icons mr-5">local_phone</i>
-                                <a class="footer-links" href="tel:86 18 51 11">86 18 51 11</a>
-                            </div>
-                        </div>
-                        <div class="col s12">
-                            <div class="valign-wrapper">
-                                <i class="material-icons mr-5">email</i>
-                                <a class="footer-links" href="mailto:bazaren@fairbutik.dk">bazaren@fairbutik.dk</a>
-                            </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="valign-wrapper">
+                            <i class="material-icons mr-5">email</i>
+                            <a class="footer-links tooltipped" href="mailto:bazaren@fairbutik.dk" data-position="top"
+                                data-tooltip="Du er velkommen til at skrive til os"
+                                aria-label="Du er velkommen til at skrive til os">
+                                bazaren@fairbutik.dk</a>
                         </div>
                     </div>
                 </div>
@@ -380,10 +387,11 @@
             $('.collapsible').collapsible({
                 accordion: false
             });
+            $('.modal').modal();
 
             var newsletterCollapsibleInstance = M.Collapsible.getInstance($('#previousNewslettersCollapsible'));
 
-            console.log(newsletterCollapsibleInstance);
+            // console.log(newsletterCollapsibleInstance);
 
             // if ($(window).width() < 900) {
             //     $("#previousNewslettersCollapsible").removeClass('active');
@@ -400,6 +408,24 @@
                     newsletterCollapsibleInstance.close(2);
                 }
             }, 250);
+        });
+
+        $(document).on("click", ".modal-trigger", function (e) {
+            // showNewsletterModal(this);
+            let month = $(this).data('newsletter-month');
+            let imgPath = "images/frontpage/newsletters/nyhedsbrev_" + month + ".jpg";
+            let header = month.charAt(0).toUpperCase() + month.slice(1) + " - " + $(this).data("newsletter-year");
+
+            // console.log(month);
+            // console.log(imgPath);
+            // console.log(header);
+
+            let newsletterToDisplay =
+                $('#newsletterTemplate').html()
+                    .replace('##newsletterModalHeader##', header)
+                    .replace('##newsletterImgPath##', imgPath);
+            // console.log($('#newsletterTemplate'));
+            $(newsletterToDisplay).appendTo('#newsletterModalContent');
         });
     </script>
 </body>
