@@ -197,8 +197,8 @@ nav .sidenav-trigger {
 /* #region Materialize CSS Overrides */
 
 .slider .indicators .indicator-item{
-    height:32px;
-    width:32px;
+    height:24px;
+    width:24px;
 }
 
 .carousel .carousel-item > img{
