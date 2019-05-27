@@ -188,7 +188,8 @@
                     <p class="flow-text">
                         <b style="font-size:2rem;">Fair Trade</b> tager udgangspunkt i at producenter i den 3. verden,
                         opnår en fair pris for deres arbejde. De lever i fattigdom med en daglig kamp om overlevelse,
-                        hvilket <b>Fair Trade</b> ønsker at ændre. <br> <b>Fair Trade</b> organisationerne vil give producenterne og deres medarbejderne
+                        hvilket <b>Fair Trade</b> ønsker at ændre. <br> <b>Fair Trade</b> organisationerne vil give
+                        producenterne og deres medarbejderne
                         en værdig
                         tilværelse, hvor de kan opnå en dag, hvor de ikke skal leve i frygt. <br> <br>
                         Fair Trade arbejde med handel af bæredygtig brugskunst. Dette består bl.a. af flettede kurve,
@@ -455,7 +456,12 @@
             $('.collapsible').collapsible({
                 accordion: false
             });
-            $('.modal').modal();
+            $('.modal').modal({
+                onCloseStart: function () {
+                    //Make sure modal's scroll is reset everytime it reopens
+                    $('.modal-content').scrollTop(0);
+                }
+            });
 
             var newsletterCollapsibleInstance = M.Collapsible.getInstance($('#previousNewslettersCollapsible'));
 
@@ -479,21 +485,18 @@
         });
 
         $(document).on("click", ".modal-trigger", function (e) {
-            // showNewsletterModal(this);
             let month = $(this).data('newsletter-month');
             let imgPath = "images/frontpage/newsletters/nyhedsbrev_" + month + ".jpg";
-            let header = month.charAt(0).toUpperCase() + month.slice(1) + " - " + $(this).data("newsletter-year");
-
-            // console.log(month);
-            // console.log(imgPath);
-            // console.log(header);
+            let header = 
+            //Make sure first letter of month is uppercase
+            month.charAt(0).toUpperCase() + month.slice(1) + " - "
+            + $(this).data("newsletter-year");
 
             let newsletterToDisplay =
                 $('#newsletterTemplate').html()
                     .replace('##newsletterModalHeader##', header)
                     .replace('##newsletterImgPath##', imgPath);
-            // console.log($('#newsletterTemplate'));
-            $(newsletterToDisplay).appendTo('#newsletterModalContent');
+            $('#newsletterModalContent').html(newsletterToDisplay);
         });
     </script>
 </body>
