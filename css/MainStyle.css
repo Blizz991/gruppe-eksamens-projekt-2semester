@@ -48,6 +48,10 @@ nav .sidenav-trigger {
     float: right;
 }
 
+.shadowed{
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 /* .footer__open-times {
     margin: auto;
     width: 80%;
@@ -128,6 +132,15 @@ nav .sidenav-trigger {
     text-align: center;
 }
 
+#previousNewslettersCollapsible > li.active > .collapsible-header::after{
+    content: " - ";
+    margin-left:auto;
+}
+
+#previousNewslettersCollapsible > li:not(.active) > .collapsible-header::after{
+    content: " + ";
+    margin-left:auto;   
+}
 /* #endregion Landing Page CSS */
 
 /* #region Products */
@@ -141,12 +154,15 @@ nav .sidenav-trigger {
 
 /* #endregion Products */
 
-/* #region History */
+/* #region About us */
 .history-text {
     margin: 0;
 }
 
-/* #endregion History */
+.history-img{
+    margin: 90px auto auto;
+}
+/* #endregion About us */
 
 /* #region Contact */
 
@@ -196,6 +212,10 @@ nav .sidenav-trigger {
 
 .m-a {
     margin: auto;
+}
+
+.mt-30__m-a{
+    margin:30px auto auto;
 }
 
 .m-0{
