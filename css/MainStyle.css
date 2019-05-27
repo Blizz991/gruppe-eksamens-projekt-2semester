@@ -48,10 +48,9 @@ nav .sidenav-trigger {
     float: right;
 }
 
-.footer__open-times {
+/* .footer__open-times {
     margin: auto;
     width: 80%;
-    /* text-align: center; */
     display: flex;
     flex-wrap: wrap;
 }
@@ -59,6 +58,20 @@ nav .sidenav-trigger {
 .footer__open-times>li {
     display: flex;
     width: 100%;
+} */
+
+.footer__open-times{
+    width:80%;
+    margin:auto;
+}
+
+.footer__open-times > tbody > tr{
+    border:none;
+}
+
+.footer__open-times > tbody > tr > td{
+    padding:0;
+    text-align:center;
 }
 
 .footer-links-container > li{
