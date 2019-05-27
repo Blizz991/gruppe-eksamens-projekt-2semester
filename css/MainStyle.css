@@ -137,6 +137,23 @@ nav .sidenav-trigger {
 
 /* #endregion History */
 
+/* #region Contact */
+
+.contact__open-times{
+    width:auto;
+}
+
+.contact__open-times > tbody > tr{
+    border:none;
+}
+
+.contact__open-times > tbody > tr > td{
+    display:inline-table;
+}   
+
+/* #endregion Contact */
+
+
 /* #region Helpers */
 .mt-45 {
     margin-top: 45px;
