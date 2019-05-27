@@ -213,7 +213,7 @@ $(document).ready(function () {
         }
     });
 
-    //Make max slide default to max
+    //Make max slide default to max -- currently doesn't work, as the input isn't being updated
     $('#priceSlider').val(945);
     //TODO: Usability!
 
@@ -236,21 +236,6 @@ $(document).ready(function () {
             .replace('##productType##', product.Type);
         $(newProduct).prependTo($('#productsContainer'));
     }
-    // $.each(shuffledProducts, function (k, product) {
-    //     let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
-
-    //     let newProduct = productTemplate.html()
-    //         .replace('##productImgSrc##', imgPath)
-    //         .replace('##productImgName##', product.ImgName)
-    //         .replace('##productImgType##', product.ImgType)
-    //         .replace('##productImgAltText##', product.Name)
-    //         .replace('##productImgTitleText##', product.Name)
-    //         .replace('##productName##', product.Name)
-    //         .replace('##productDescription##', product.Description)
-    //         .replace('##productPrice##', product.Price)
-    //         .replace('##productType##', product.Type);
-    //     $(newProduct).appendTo($('#productsContainer'));
-    // });
 
     $(document).on("click", ".modal-trigger", function (e) {
         let productName = $(this).data('product-name');

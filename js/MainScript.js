@@ -37,8 +37,3 @@ $('.menu li').each(function () {
     }
 });
 
-// $('.carousel.carousel-slider').carousel({
-//     fullWidth: true,
-//     indicators: true
-// });
-

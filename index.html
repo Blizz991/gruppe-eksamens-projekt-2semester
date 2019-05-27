@@ -24,10 +24,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/MainStyle.css">
     <style>
-        main {
-            /* Push content down so it's not behind the slider */
-            margin-top: calc(100vh - 60px);
-        }
+
     </style>
 </head>
 <header class="row navbar-fixed">
@@ -93,71 +90,8 @@
             </li>
         </ul>
     </section>
-    <main class="row">
-        <!-- <div class="col s9">
-            <h2 class="center-align">Nyheder i butikken</h2>
-            <div class="carousel">
-                <a class="carousel-item" href="#one!"><img
-                        src="images/frontpage/new-products/nyhed-hvid-flodhest.png"></a>
-                <a class="carousel-item" href="#two!"><img
-                        src="images/frontpage/new-products/nyhed-roed-elefant.png"></a>
-                <a class=" carousel-item" href="#three!"><img
-                        src="images/frontpage/new-products/nyhed-kurve.png"></a>
-                <a class=" carousel-item" href="#four!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now"></a>
-                <a class=" carousel-item" href="#five!"><img
-                        src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now"></a>
-            </div>
-        </div> -->
+    <main id="landingPageMain" class="row">
         <section class="col s9">
-            <!-- <h2 class="center-align">Nyheder i butikken</h2>
-            <div class="col s6 offset-s3">
-                <div class="carousel carousel-slider center">
-                    <div class="carousel-fixed-item center">
-                        <a href="produkter.html" class="btn waves-effect light-blue accent-2 darken-text-2">Se alle
-                            produkter</a>
-                    </div>
-                    <div class="carousel-item green white-text" href="#one!">
-                        <h2>First Panel</h2>
-                        <p class="white-text">This is your first panel</p>
-                        <img class="responsive-img" src="images/frontpage/new-products/nyhed-hvid-flodhest.png">
-                    </div>
-                    <div class="carousel-item amber white-text" href="#two!">
-                        <h2>Second Panel</h2>
-                        <p class="white-text">This is your second panel</p>
-                        <img class="responsive-img" src="images/frontpage/new-products/nyhed-hvid-flodhest.png">
-                    </div>
-                    <div class="carousel-item green white-text" href="#three!">
-                        <h2>Third Panel</h2>
-                        <p class="white-text">This is your third panel</p>
-                        <img class="responsive-img" src="images/frontpage/new-products/nyhed-hvid-flodhest.png">
-                    </div>
-                    <div class="carousel-item blue white-text" href="#four!">
-                        <h2>Fourth Panel</h2>
-                        <p class="white-text">This is your fourth panel</p>
-                        <img class="responsive-img" src="images/frontpage/new-products/nyhed-hvid-flodhest.png">
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="carousel">
-                    <a class="carousel-item" href="#one!"><img
-                            src="images/frontpage/new-products/nyhed-hvid-flodhest.png"></a>
-                    <a class="carousel-item" href="#two!"><img
-                            src="images/frontpage/new-products/nyhed-roed-elefant.png"></a>
-                    <a class=" carousel-item" href="#three!"><img
-                            src="images/frontpage/new-products/nyhed-kurve.png"></a>
-                            <a class=" carousel-item" href="#three!"><img
-                                src="images/frontpage/new-products/nyhed-kurve.png"></a>
-                                <a class=" carousel-item" href="#three!"><img
-                                    src="images/frontpage/new-products/nyhed-kurve.png"></a>
-
-                                    <a class=" carousel-item" href="#three!"><img
-                                        src="images/frontpage/new-products/nyhed-kurve.png"></a>
-                    <a class=" carousel-item" href="#four!"><img
-                            src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now"></a>
-                    <a class=" carousel-item" href="#five!"><img
-                            src="https://via.placeholder.com/468x356?text=Visit+Blogging.com+Now"></a>
-                </div> -->
             <h2 class="center-align">Nyheder i butikken</h2>
             <div class="row">
                 <div class="col s4">
@@ -173,14 +107,15 @@
                         src="images/products/768x768/hangekoje-denim-ecru-genbrug_768x768.jpg">
                 </div>
                 <div class="col s6 offset-s3 d-flex">
-                    <a href="produkter.html" title="Se alle produkter" class="btn waves-effect waves-light light-blue accent-2 mt-30__m-a" type="submit"
+                    <a href="produkter.html" title="Se alle produkter"
+                        class="btn waves-effect waves-light light-blue accent-2 mt-30__m-a" type="submit"
                         name="action">Se alle produkter
                         <i class="material-icons right">chevron_right</i>
-                </a>
+                    </a>
                 </div>
             </div>
             <article>
-                <div class="col s8 offset-s2 mt-30">
+                <article class="col s8 offset-s2 mt-30">
                     <blockquote class="flow-text italic">
                         <q>Vi går ind for en økonomisk verden som sikrer at producenter i u-lande får en større
                             andel af de penge som handlen med deres egne produkter indbringer. <br> <br>
@@ -189,7 +124,7 @@
                             børn behøver at arbejde for at skaffe familien brød på bordet.</q>
                     </blockquote>
                     <h6 class="italic">Poul - butikkens indehaver, 2019</h6>
-                </div>
+                </article>
                 <article class="col s10 offset-s1 mt-30">
                     <h3>Hvad er Fair Trade?</h3>
                     <p class="flow-text">
@@ -243,10 +178,6 @@
                             data-newsletter-year="2019">
                             <img class="latest-newsletters-img responsive-img"
                                 src="images/frontpage/newsletters/thumbs/nyhedsbrev_maj_thumb.jpg" />
-                            <!-- <div class="centered-content">
-                                    <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                                    <h6 class="latest-newsletters-header">Maj 2019</h6>
-                                </div> -->
                         </a>
                     </div>
                 </li>
@@ -257,10 +188,6 @@
                             data-newsletter-year="2019">
                             <img class="latest-newsletters-img responsive-img"
                                 src="images/frontpage/newsletters/thumbs/nyhedsbrev_april_thumb.jpg" />
-                            <!-- <div class="centered-content">
-                                    <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                                    <h6 class="latest-newsletters-header">April 2019</h6>
-                                </div> -->
                         </a>
                     </div>
                 </li>
@@ -271,10 +198,6 @@
                             data-newsletter-year="2019">
                             <img class="latest-newsletters-img responsive-img"
                                 src="images/frontpage/newsletters/thumbs/nyhedsbrev_marts_thumb.jpg" />
-                            <!-- <div class="centered-content">
-                                    <h5 class="latest-newsletters-header">Nyhedsbrev</h5>
-                                    <h6 class="latest-newsletters-header">Marts 2019</h6>
-                                </div> -->
                         </a>
                     </div>
                 </li>
@@ -296,7 +219,7 @@
 
     <footer class="page-footer green darken-2">
         <div class="row">
-            <div class="col xl6 l6 m6 offset-m3 s12">
+            <div class="col xl7 l7 m6 offset-m3 s12">
                 <div class="col xl4">
                     <h5 class="white-text center-align">Leverandører</h5>
                     <ul class="footer-links-container">
@@ -389,7 +312,7 @@
                 </div>
 
             </div>
-            <div class="col xl3 l3 m6 offset-m3 s12">
+            <div class="col xl2 l2 m6 offset-m3 s12">
                 <h4 class="white-text center-align">Åbningstider</h4>
                 <table class="footer__open-times table-responsive highlight center-align">
                     <tr>
@@ -458,69 +381,16 @@
             </div>
         </div>
     </footer>
+    <!--JavaScript at end of body for optimized loading-->
     <!-- Her kunne vi evt. have brugt slim versionen -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Slim version hvis vi ikke har behov for alle funktionerne -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> -->
-    <!--JavaScript at end of body for optimized loading-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Our javascript -->
     <script src="js/MainScript.js"></script>
-    <script>
-        //Initialize Materialize CSS components used on this page
-        $(document).ready(function () {
-            $('.slider').slider();
-            $('.carousel').carousel({
-                fullWidth: true,
-                indicators: true
-            });
-            $('.materialboxed').materialbox();
-            $('.collapsible').collapsible({
-                accordion: false
-            });
-            $('.modal').modal({
-                onCloseStart: function () {
-                    //Make sure modal's scroll is reset everytime it reopens
-                    $('.modal-content').scrollTop(0);
-                }
-            });
-
-            var newsletterCollapsibleInstance = M.Collapsible.getInstance($('#previousNewslettersCollapsible'));
-
-            // console.log(newsletterCollapsibleInstance);
-
-            // if ($(window).width() < 900) {
-            //     $("#previousNewslettersCollapsible").removeClass('active');
-            // }
-
-        });
-
-
-        $(window).resize(function () {
-            clearTimeout(window.resizedFinished);
-            window.resizedFinished = setTimeout(function () {
-                if ($(window).width() < 900) {
-                    // $("#previousNewslettersCollapsible").removeClass('active');
-                    newsletterCollapsibleInstance.close(2);
-                }
-            }, 250);
-        });
-
-        $(document).on("click", ".modal-trigger", function (e) {
-            let month = $(this).data('newsletter-month');
-            let imgPath = "images/frontpage/newsletters/nyhedsbrev_" + month + ".jpg";
-            let header =
-                //Make sure first letter of month is uppercase
-                month.charAt(0).toUpperCase() + month.slice(1) + " - "
-                + $(this).data("newsletter-year");
-
-            let newsletterToDisplay =
-                $('#newsletterTemplate').html()
-                    .replace('##newsletterModalHeader##', header)
-                    .replace('##newsletterImgPath##', imgPath);
-            $('#newsletterModalContent').html(newsletterToDisplay);
-        });
-    </script>
+    <script src="js/LandingPage.js"></script>
 </body>
 
 </html>

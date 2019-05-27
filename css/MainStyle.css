@@ -10,28 +10,32 @@
 } */
 
 /* #region Global CSS */
-h1{
+h1 {
     font-family: "Lato", Arial, Helvetica, sans-serif;
-    font-weight:900;
+    font-weight: 900;
 }
 
-h2,h3,h4,h5,h6{
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Lato", Arial, Helvetica, sans-serif;
-    font-weight:700;
+    font-weight: 700;
 }
 
-body{
+body {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
-a{
-    font-weight:600;
+a {
+    font-weight: 600;
     transition: all 0.2s ease;
 }
 
-a:hover{
-    color:#1e1e1e;
+a:hover {
+    color: #1e1e1e;
 }
 
 nav .brand-logo {
@@ -48,38 +52,26 @@ nav .sidenav-trigger {
     float: right;
 }
 
-.shadowed{
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+.shadowed {
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* .footer__open-times {
-    margin: auto;
+.footer__open-times {
     width: 80%;
-    display: flex;
-    flex-wrap: wrap;
+    margin: auto;
 }
 
-.footer__open-times>li {
-    display: flex;
-    width: 100%;
-} */
-
-.footer__open-times{
-    width:80%;
-    margin:auto;
+.footer__open-times>tbody>tr {
+    border: none;
 }
 
-.footer__open-times > tbody > tr{
-    border:none;
+.footer__open-times>tbody>tr>td {
+    padding: 0;
+    text-align: center;
 }
 
-.footer__open-times > tbody > tr > td{
-    padding:0;
-    text-align:center;
-}
-
-.footer-links-container > li{
-    padding:5px 0;
+.footer-links-container>li {
+    padding: 5px 0;
 }
 
 .footer-links {
@@ -90,27 +82,33 @@ nav .sidenav-trigger {
 
 
 /* #region Landing Page CSS */
-.slides > li > .caption > h1,
-.slides > li > .caption > h2,
-.slides > li > .caption > h3,
-.slides > li > .caption > h5{
-    
-    background-color:rgba(0,0,0,0.6);
-    display:inline-block;
-    border-radius:10px;
+#landingPageMain {
+    /* Push content down so it's not behind the slider */
+    margin-top: calc(100vh - 60px);
 }
 
-.slides > li > .caption > h1,
-.slides > li > .caption > h2,
-.slides > li > .caption > h3{
-    padding:5px 30px;
+.slides>li>.caption>h1,
+.slides>li>.caption>h2,
+.slides>li>.caption>h3,
+.slides>li>.caption>h5 {
+
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    border-radius: 10px;
 }
 
-.slides > li > .caption > h5{
+.slides>li>.caption>h1,
+.slides>li>.caption>h2,
+.slides>li>.caption>h3 {
+    padding: 5px 30px;
+}
+
+.slides>li>.caption>h5 {
     padding: 5px 10px;
 }
-.slides > li > .caption > hr{
-    border-color:transparent;
+
+.slides>li>.caption>hr {
+    border-color: transparent;
 }
 
 .featured-product--img {
@@ -118,7 +116,6 @@ nav .sidenav-trigger {
 }
 
 .newsletter-section {
-    /* border: 1px solid pink; */
     padding: 0;
 }
 
@@ -128,28 +125,28 @@ nav .sidenav-trigger {
 }
 
 .latest-newsletters-header {
-    /* width:50%; */
     text-align: center;
 }
 
-#previousNewslettersCollapsible > li.active > .collapsible-header::after{
+#previousNewslettersCollapsible>li.active>.collapsible-header::after {
     content: " - ";
-    margin-left:auto;
+    margin-left: auto;
 }
 
-#previousNewslettersCollapsible > li:not(.active) > .collapsible-header::after{
+#previousNewslettersCollapsible>li:not(.active)>.collapsible-header::after {
     content: " + ";
-    margin-left:auto;   
+    margin-left: auto;
 }
+
 /* #endregion Landing Page CSS */
 
 /* #region Products */
-#productModal{
+#productModal {
     min-height: 650px;
 }
 
-.product-img-container{
-    padding:.75rem !important;
+.product-img-container {
+    padding: .75rem !important;
 }
 
 /* #endregion Products */
@@ -159,24 +156,25 @@ nav .sidenav-trigger {
     margin: 0;
 }
 
-.history-img{
+.history-img {
     margin: 90px auto auto;
 }
+
 /* #endregion About us */
 
 /* #region Contact */
 
-.contact__open-times{
-    width:auto;
+.contact__open-times {
+    width: auto;
 }
 
-.contact__open-times > tbody > tr{
-    border:none;
+.contact__open-times>tbody>tr {
+    border: none;
 }
 
-.contact__open-times > tbody > tr > td{
-    display:inline-table;
-}   
+.contact__open-times>tbody>tr>td {
+    display: inline-table;
+}
 
 /* #endregion Contact */
 
@@ -214,12 +212,12 @@ nav .sidenav-trigger {
     margin: auto;
 }
 
-.mt-30__m-a{
-    margin:30px auto auto;
+.mt-30__m-a {
+    margin: 30px auto auto;
 }
 
-.m-0{
-    margin:0;
+.m-0 {
+    margin: 0;
 }
 
 .d-flex {
@@ -242,8 +240,8 @@ nav .sidenav-trigger {
     height: auto;
 }
 
-.google-maps-container{
-    padding-bottom:20%;
+.google-maps-container {
+    padding-bottom: 20%;
 }
 
 /* #region Typography */
@@ -261,17 +259,17 @@ nav .sidenav-trigger {
 
 /* #region Materialize CSS Overrides */
 
-.slider .indicators .indicator-item{
-    height:24px;
-    width:24px;
+.slider .indicators .indicator-item {
+    height: 24px;
+    width: 24px;
 }
 
-.carousel .carousel-item > img{
-    width:auto;
+.carousel .carousel-item>img {
+    width: auto;
 }
 
-.carousel{
-    min-height:500px;
+.carousel {
+    min-height: 500px;
 }
 
 .modal-trigger {
@@ -280,50 +278,50 @@ nav .sidenav-trigger {
 
 textarea.materialize-textarea {
     height: 6rem;
-    border:1px solid #9e9e9e;
-    margin-top:10px;
-    padding:10px;
+    border: 1px solid #9e9e9e;
+    margin-top: 10px;
+    padding: 10px;
 }
 
-textarea.materialize-textarea:focus{
+textarea.materialize-textarea:focus {
     border: 1px solid #26a69a;
 }
 
-.text-area-label{
-    margin-left:10px;
+.text-area-label {
+    margin-left: 10px;
 }
 
-.input-field > .active{
-    margin-left:0;
+.input-field>.active {
+    margin-left: 0;
 }
 
-.collapsible-header{
-    background-color:inherit;
+.collapsible-header {
+    background-color: inherit;
     font-size: 18px;
-    font-weight:600;
+    font-weight: 600;
 }
 
-blockquote{
-    border-color:#40c4ff;
+blockquote {
+    border-color: #40c4ff;
 }
 
-.pagination li.active{
-    background-color:#40c4ff;
+.pagination li.active {
+    background-color: #40c4ff;
 }
 
 
 /* change colour of filled in check box */
-.checkbox-blue-grey[type="checkbox"].filled-in:checked + span:not(.lever):after 
-{
-    border: 2px solid #40c4ff;  
+.checkbox-blue-grey[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid #40c4ff;
     background-color: #40c4ff;
 }
 
-input[type=range]+.thumb{
+input[type=range]+.thumb {
     background-color: #40c4ff;
 }
 
 nav ul li.active {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
+
 /* #endregion Materialize CSS Overrides  */
