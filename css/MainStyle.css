@@ -302,4 +302,8 @@ blockquote{
 input[type=range]+.thumb{
     background-color: #40c4ff;
 }
+
+nav ul li.active {
+    background-color: rgba(0,0,0,0.3);
+}
 /* #endregion Materialize CSS Overrides  */
