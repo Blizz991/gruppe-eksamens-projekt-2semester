@@ -20,22 +20,22 @@
     <link rel="stylesheet" href="css/MainStyle.css">
 </head>
 <header class="row navbar-fixed">
-        <nav class="green darken-3">
-            <div class="nav-wrapper">
-                <div class="col s12">
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <a href="index.html" class="brand-logo"><img class="responsive-img" src="images/logofairtrade.PNG">
-                        <span class="hide-on-med-and-down">Fair Trade Bazaren</span></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="produkter.html">Produkter</a></li>
-                        <li><a href="fair-forskelle.html">Fair trade</a></li>
-                        <li><a href="om-os.html">Om os</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </div>
+    <nav class="green darken-3">
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="index.html" class="brand-logo"><img class="responsive-img" src="images/logofairtrade.PNG">
+                    <span class="hide-on-med-and-down">Fair Trade Bazaren</span></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="produkter.html">Produkter</a></li>
+                    <li><a href="fair-forskelle.html">Fair trade</a></li>
+                    <li><a href="om-os.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
 <body class="green lighten-5">
     <ul class="sidenav" id="mobile-demo">
@@ -46,7 +46,7 @@
     </ul>
     <main class="row">
         <div class="col s12">
-            <h2>Produkter</h2>
+            <h2 class="m-0">Produkter</h2>
         </div>
         <div class="col l2">
             <div class="card-panel white">
@@ -97,10 +97,26 @@
                 </form>
             </div>
         </div>
-        <div id="productsContainer"></div>
+        <div id="productsContainer" class="row">
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <ul class="pagination center">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+            </div>
+        </div>
+
         <template id="productTemplate">
             <div class="col l2 s12 mt-45">
                 <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
+                    data-img-name="##productImgName##" data-img-type="##productImgType##"
                     data-product-name="##productName##" data-product-description="##productDescription##"
                     data-product-price="##productPrice##" data-product-type="##productType##"
                     class="m-a d-flex modal-trigger responsive-img" width="256" data-target="productModal">
@@ -126,14 +142,25 @@
                 class="m-a d-flex responsive-img" width="256"></div>
         <div class="col xl2 l2 s12 mt-45"><img src="https://placehold.it/256x256" alt=""
                 class="m-a d-flex responsive-img" width="256"></div> -->
-
-        <div id="productModal" class="modal" aria-hidden="true">
-            <div class="modal-content">
+        <template id="productModalTemplate">
+            <div class="row">
                 <h4>##productName##</h4>
-                <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##" width=>
-                <p>##productDescription##</p>
-                <p>##productPrice##</p>
-                <p>##productType##</p>
+                <div class="col l9 m12">
+                    <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##">
+                </div>
+                <div class="col l3 m12">
+                    <h6>Beskrivelse</h6>
+                    <p>##productDescription##</p>
+                    <p class="bold">##productPrice##</p>
+                    <div class="chip">
+                        ##productType##
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div id="productModal" class="modal" aria-hidden="true">
+            <div id="productModalContent" class="modal-content">
+
             </div>
             <!-- <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>

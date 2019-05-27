@@ -130,6 +130,13 @@ nav .sidenav-trigger {
 
 /* #endregion Landing Page CSS */
 
+/* #region Products */
+#productModal{
+    min-height: 650px;
+}
+
+/* #endregion Products */
+
 /* #region History */
 .history-text {
     margin: 0;
@@ -185,6 +192,10 @@ nav .sidenav-trigger {
 
 .m-a {
     margin: auto;
+}
+
+.m-0{
+    margin:0;
 }
 
 .d-flex {
@@ -270,6 +281,10 @@ textarea.materialize-textarea:focus{
 
 blockquote{
     border-color:#40c4ff;
+}
+
+.pagination li.active{
+    background-color:#40c4ff;
 }
 
 /* #endregion Materialize CSS Overrides  */
