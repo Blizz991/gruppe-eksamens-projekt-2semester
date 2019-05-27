@@ -56,31 +56,31 @@
                     <label for="productSearch">Søg</label>
                 </div>
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" />
+                    <input type="checkbox" class="filled-in checkbox-blue-grey" checked="checked" />
                     <span>Vis alle</span>
                 </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" class="filled-in" />
+                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
                         <span>Tørklæder</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" class="filled-in" />
+                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
                         <span>Måtter</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" class="filled-in" />
+                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
                         <span>Hængekøjer</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <input type="checkbox" class="filled-in" />
+                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
                         <span>Kurve</span>
                     </label>
                 </p>
@@ -98,23 +98,24 @@
             </div>
         </div>
         <div id="productsContainer" class="row">
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <ul class="pagination center">
-                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!">4</a></li>
-                    <li class="waves-effect"><a href="#!">5</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>
+            <div class="row">
+                <div class="col col l4 offset-l2 s12">
+                    <ul class="pagination center">
+                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
+
         <template id="productTemplate">
-            <div class="col l2 s12 mt-45">
+            <div class="col l2 s12 product-img-container">
                 <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
                     data-img-name="##productImgName##" data-img-type="##productImgType##"
                     data-product-name="##productName##" data-product-description="##productDescription##"

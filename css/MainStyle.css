@@ -135,6 +135,10 @@ nav .sidenav-trigger {
     min-height: 650px;
 }
 
+.product-img-container{
+    padding:.75rem !important;
+}
+
 /* #endregion Products */
 
 /* #region History */
@@ -287,4 +291,15 @@ blockquote{
     background-color:#40c4ff;
 }
 
+
+/* change colour of filled in check box */
+.checkbox-blue-grey[type="checkbox"].filled-in:checked + span:not(.lever):after 
+{
+    border: 2px solid #40c4ff;  
+    background-color: #40c4ff;
+}
+
+input[type=range]+.thumb{
+    background-color: #40c4ff;
+}
 /* #endregion Materialize CSS Overrides  */

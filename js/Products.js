@@ -234,7 +234,7 @@ $(document).ready(function () {
             .replace('##productDescription##', product.Description)
             .replace('##productPrice##', product.Price)
             .replace('##productType##', product.Type);
-        $(newProduct).appendTo($('#productsContainer'));
+        $(newProduct).prependTo($('#productsContainer'));
     }
     // $.each(shuffledProducts, function (k, product) {
     //     let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;

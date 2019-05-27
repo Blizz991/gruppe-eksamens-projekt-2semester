@@ -22,14 +22,12 @@ url = url.substr(url.lastIndexOf("/") + 1);
 if (url == '') {
     url = 'index.html';
 }
-console.log(url);
 
 // Loop all menu items
 $('.menu li').each(function () {
 
     // select href
     var href = $(this).find('a').attr('href');
-    console.log(href);
 
     // Check filename
     if (url == href) {
