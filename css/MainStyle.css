@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,600&display=swap');
 
 /* #region Global CSS */
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    max-width:1920px;
+    margin:auto;
+}
+
+nav,
+.slider{
+    max-width:1920px;
+    margin:auto;
+}
+
 h1 {
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 900;
@@ -13,11 +26,6 @@ h5,
 h6 {
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 700;
-}
-
-body {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-weight: 400;
 }
 
 a {
@@ -221,6 +229,14 @@ nav .sidenav-trigger {
 
 .mr-5 {
     margin-right: 5px;
+}
+
+.mb-15{
+    margin-bottom:15px;
+}
+
+.mb-30{
+    margin-bottom:30px;
 }
 
 .my-30 {

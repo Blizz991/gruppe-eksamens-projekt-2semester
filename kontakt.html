@@ -51,12 +51,11 @@
         <li><a href="om-os.html">Historie</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
-    <!-- TODO:Make responsive -->
     <main class="row">
         <div class="col l11 offset-l1 s12">
             <h1>Kontakt</h1>
         </div>
-        <div class="col l5 offset-l1 s12">
+        <div class="col l5 offset-l1 s12 mb-30">
             <h3>Skriv til os</h3>
             <div class="input-field col s12">
                 <input id="contactEmail" type="email" class="validate">
@@ -68,38 +67,34 @@
                 <label class="text-area-label" for="contactMessage">Skriv din besked her</label>
             </div>
             <div class="col s12">
-                <button class="btn waves-effect waves-light light-blue accent-2" type="submit" onclick="sendMessage();"
+                <button class="btn waves-effect waves-light light-blue accent-2 btn-large" type="submit" onclick="sendMessage();"
                     name="action">Send besked
                     <i class="material-icons right">send</i>
                 </button>
             </div>
         </div>
-        <div class="col l5 offset-l1 s12">
-            <h4>Kontakt</h4>
-            <div class="col s12 flow-text">
-                <address>
+        <div class="col l6 m8 offset-m2 s12 center-align">
+            <div class="col m6 s12 mb-15">
+                <address class="flow-text">
                     <span class="bold">Fair Trade Butik Bazaren</span> <br>
                     Guldsmedgade 8A, <br>
                     8000 Aarhus
                 </address>
-            </div>
-            <div class="col s12 mt-15">
-                <div class="valign-wrapper">
+                <div class="col s12 mt-15">
                     <i class="material-icons mr-5">local_phone</i>
                     <a href="tel:86185111">86 18 51 11</a>
                 </div>
-            </div>
-            <div class="col s12">
-                <div class="valign-wrapper">
+                <div class="col s12">
                     <i class="material-icons mr-5">email</i>
                     <a class="tooltipped" data-position="bottom" data-tooltip="Du kan også bruge kontakt formularen"
                         aria-label="Fair Trade varer fra Bangladesh, Chile og flere andre lande"
                         href="mailto:bazaren@fairbutik.dk">bazaren@fairbutik.dk</a>
                 </div>
             </div>
-            <div class="col s12">
-                <h4>Åbningstider</h4>
-                <table class="contact__open-times table-responsive highlight center-align">
+
+            <div class="col m6 s12">
+                <h4 class="m-0">Åbningstider</h4>
+                <table class="contact__open-times table-responsive highlight center-align m-a">
                     <tbody>
                         <tr>
                             <td>Mandag - Torsdag</td>
