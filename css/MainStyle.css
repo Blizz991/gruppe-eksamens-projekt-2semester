@@ -393,4 +393,8 @@ nav ul li.active {
         height: 16px;
         width: 16px;
     }
+
+    .center-align-s{
+        text-align:center;
+    }
 }

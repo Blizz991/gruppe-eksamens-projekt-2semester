@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Produkter - Fair Trade Bazaren</title>
-    <meta name="description" content="???">
-
+    <meta name="description" content="Vi har byens mest spændende kort, flot keramik fra Sydafrika, varme alpaca strømper fra Peru,
+    CE-certificeret legetøj, gulvløbere og tasker af gamle sarier, smykker fra mange lande,
+    solcelledrevne lamper, papir fremstillet af elefantmøg!">
     <!-- Prevent robots from indexing this page, just in case they end up here from another link
         (read: https://support.google.com/webmasters/answer/6062608?hl=en) -->
     <meta name="robots" content="noindex, nofollow">
@@ -25,7 +26,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/MainStyle.css">
     <script>
-    
+
 
     </script>
 </head>
@@ -141,7 +142,8 @@
             <div class="row">
                 <h4>##productName##</h4>
                 <div class="col xl9 l7 m8 s12">
-                    <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##" class="responsive-img">
+                    <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
+                        class="responsive-img">
                 </div>
                 <div class="col xl3 l5 m4 s12">
                     <h6>Beskrivelse</h6>
@@ -153,8 +155,11 @@
                 </div>
             </div>
         </template>
-        <div id="productModal" class="modal" aria-hidden="true">
+        <div id="productModal" class="modal modal-fixed-footer" aria-hidden="true">
             <div id="productModalContent" class="modal-content">
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close red btn-small modal-action modal-close btn-flat">Luk</a>
             </div>
         </div>
     </main>
