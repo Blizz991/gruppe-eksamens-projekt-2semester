@@ -8,14 +8,13 @@ function Product(Name, Description, Price, Type, ImgName, ImgType) {
 }
 
 var products = [
-
     new Product(
         "Tørklæde silke batik (Bangladesh)", //Name
-        "Tørklæde, silke, batik, Bangladesh",
-        149,
-        "Tørklæde",
-        "torklade-silke-batik_bangladesh",
-        "jpg"
+        "Tørklæde, silke, batik, Bangladesh", //Description
+        149, //Price
+        "Tørklæde", //Type
+        "torklade-silke-batik_bangladesh", //ImgName
+        "jpg" //ImgType
     ),
     new Product(
         "Tørklæde af silke (Bangladesh",
