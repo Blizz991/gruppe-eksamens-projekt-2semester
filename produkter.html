@@ -24,6 +24,10 @@
     <!-- Get icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/MainStyle.css">
+    <script>
+    
+
+    </script>
 </head>
 
 <body class="green lighten-5">
@@ -55,59 +59,62 @@
         <div class="col s12">
             <h2 class="m-0">Produkter</h2>
         </div>
-        <div class="col l2">
-            <div class="card-panel white">
-                <h4>Filtre</h4>
-                <div class="input-field">
-                    <input id="productSearch" type="search">
-                    <label for="productSearch">Søg</label>
-                </div>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in checkbox-blue-grey" checked="checked" />
-                        <span>Vis alle</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
-                        <span>Tørklæder</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
-                        <span>Måtter</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
-                        <span>Hængekøjer</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" class="filled-in checkbox-blue-grey" />
-                        <span>Kurve</span>
-                    </label>
-                </p>
-
-                <h6>Max pris</h6>
-                <form action="#">
-                    <p class="range-field">
-                        <input type="range" id="priceMaxPriceSlider" min="0" max="945" />
-                    </p>
-                    <div class="input-field">
-                        <input id="productMaxPrice" min="0" type="number">
-                        <label for="productMaxPrice">Max pris</label>
+        <div class="col xl2 s12 sticky">
+            <ul class="collapsible expandable white">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_list</i>Filtre</div>
+                    <div class="collapsible-body">
+                        <div class="input-field">
+                            <input id="productSearch" type="search">
+                            <label for="productSearch">Søg</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" checked="checked" />
+                                <span>Vis alle</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <span>Tørklæder</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <span>Måtter</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <span>Hængekøjer</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <span>Kurve</span>
+                            </label>
+                        </div>
+                        <h6>Max pris</h6>
+                        <form action="#">
+                            <p class="range-field">
+                                <input type="range" id="priceMaxPriceSlider" min="0" max="945" />
+                            </p>
+                            <div class="input-field">
+                                <input id="productMaxPrice" min="0" type="number">
+                                <label for="productMaxPrice">Max pris</label>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
+                </li>
+            </ul>
         </div>
         <div id="productsContainer" class="row">
             <div class="row">
-                <div class="col col l4 offset-l2 s12">
+                <div class="col s12">
                     <ul class="pagination center">
                         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                         <li class="active"><a href="#!">1</a></li>
@@ -121,9 +128,8 @@
             </div>
         </div>
 
-
         <template id="productTemplate">
-            <div class="col l2 s12 product-img-container">
+            <div class="col xl2 l4 m6 s12 product-img-container">
                 <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
                     data-img-name="##productImgName##" data-img-type="##productImgType##"
                     data-product-name="##productName##" data-product-description="##productDescription##"
@@ -134,12 +140,12 @@
         <template id="productModalTemplate">
             <div class="row">
                 <h4>##productName##</h4>
-                <div class="col l9 m12">
-                    <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##">
+                <div class="col xl9 l7 m8 s12">
+                    <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##" class="responsive-img">
                 </div>
-                <div class="col l3 m12">
+                <div class="col xl3 l5 m4 s12">
                     <h6>Beskrivelse</h6>
-                    <p>##productDescription##</p>
+                    <p class="mt-15">##productDescription##</p>
                     <p><span class="bold">Pris:</span> ##productPrice##</p>
                     <div class="chip">
                         ##productType##

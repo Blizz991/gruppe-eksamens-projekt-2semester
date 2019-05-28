@@ -119,36 +119,57 @@ nav .sidenav-trigger {
     text-align: center;
 }
 
-#previousNewslettersCollapsible>li.active>.collapsible-header::after {
+.collapsible>li.active>.collapsible-header::after {
     content: " - ";
     margin-left: auto;
 }
 
-#previousNewslettersCollapsible>li:not(.active)>.collapsible-header::after {
+.collapsible>li:not(.active)>.collapsible-header::after {
     content: " + ";
     margin-left: auto;
 }
 
-.newsletter__tablet-down__month-header__container{
-    color:#fff;
-    background-color:rgba(0, 0, 0, 0.5);
-    padding:5px 10px;
+.newsletter__tablet-down__month-header__container {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
     text-align: center;
-    text-shadow:1px 1px #000;
+    text-shadow: 1px 1px #000;
     box-sizing: border-box;
-    border:2px inset #7d7d7d;
-    border-radius:20px;
+    border: 2px inset #7d7d7d;
+    border-radius: 20px;
 }
 
 /* #endregion Landing Page CSS */
 
 /* #region Products */
 #productModal {
-    min-height: 650px;
+    min-height: 60vh;
+}
+
+#productModalContent>.row>h4 {
+    font-size: 1.8rem;
+}
+
+@media only screen and (min-width:1200px) {
+    #productModal {
+        min-height: 650px;
+    }
 }
 
 .product-img-container {
     padding: .75rem !important;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    padding: 0 5px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
 }
 
 /* #endregion Products */
@@ -325,35 +346,34 @@ input[type=range]+.thumb {
 nav ul li.active {
     background-color: rgba(0, 0, 0, 0.3);
 }
-.valign-wrapper{
+
+.valign-wrapper {
     justify-content: center;
 }
 
-/* #endregion Materialize CSS Overrides  */
-
-@media only screen and (max-width:992px){
-
+.keyboard-focused .collapsible-header:focus {
+    background: initial;
 }
 
-
+/* #endregion Materialize CSS Overrides  */
 @media only screen and (max-width: 600px) {
-    .caption > h1{
-        font-size:3rem;
+    .caption>h1 {
+        font-size: 3rem;
     }
 
-    .caption > h2{
-        font-size:1.9rem;
+    .caption>h2 {
+        font-size: 1.9rem;
     }
 
-    .caption > h3{
-        font-size:1.8rem;
+    .caption>h3 {
+        font-size: 1.8rem;
     }
 
-    .caption > h5{
-        font-size:1.5rem;
+    .caption>h5 {
+        font-size: 1.5rem;
     }
 
-    .slider .indicators .indicator-item{
+    .slider .indicators .indicator-item {
         height: 16px;
         width: 16px;
     }

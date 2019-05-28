@@ -211,6 +211,9 @@ $(document).ready(function () {
             $('.modal-content').scrollTop(0);
         }
     });
+    $('.collapsible').collapsible({
+        accordion: false
+    });
 
     //Make max slide default to max -- currently doesn't work, as the input isn't being updated
     $('#priceSlider').val(945);
@@ -222,7 +225,7 @@ $(document).ready(function () {
     for (let index = 0; index < 10; index++) {
         const product = shuffledProducts[index];
         let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
-        
+
         let newProduct = productTemplate.html()
             .replace('##productImgSrc##', imgPath)
             .replace('##productImgName##', product.ImgName)
@@ -253,7 +256,22 @@ $(document).ready(function () {
             .replace('##productType##', productType);
         $('#productModalContent').html(productToDisplay);
     });
-});
+
+    if ($(window).width() > 1200) {
+        $('.collapsible').collapsible('open');
+    };
+
+        // $(window).resize(function () {
+        //     clearTimeout(window.resizedFinished);
+        //     window.resizedFinished = setTimeout(function () {
+        //         if ($(window).width() < 1200) {
+        //             $('.collapsible').collapsible('close');
+        //             console.log('Collapse!');
+        //         }
+        //     }, 250);
+        // });
+
+    });
 
 /*
  * Randomize array element order in-place.

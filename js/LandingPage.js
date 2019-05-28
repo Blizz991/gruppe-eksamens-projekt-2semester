@@ -15,26 +15,6 @@ $(document).ready(function () {
             $('.modal-content').scrollTop(0);
         }
     });
-
-    var newsletterCollapsibleInstance = M.Collapsible.getInstance($('#previousNewslettersCollapsible'));
-
-    // console.log(newsletterCollapsibleInstance);
-
-    // if ($(window).width() < 900) {
-    //     $("#previousNewslettersCollapsible").removeClass('active');
-    // }
-
-});
-
-
-$(window).resize(function () {
-    clearTimeout(window.resizedFinished);
-    window.resizedFinished = setTimeout(function () {
-        if ($(window).width() < 900) {
-            // $("#previousNewslettersCollapsible").removeClass('active');
-            newsletterCollapsibleInstance.close(2);
-        }
-    }, 250);
 });
 
 $(document).on("click", ".modal-trigger", function (e) {
