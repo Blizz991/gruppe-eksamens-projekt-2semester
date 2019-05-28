@@ -129,6 +129,17 @@ nav .sidenav-trigger {
     margin-left: auto;
 }
 
+.newsletter__tablet-down__month-header__container{
+    color:#fff;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding:5px 10px;
+    text-align: center;
+    text-shadow:1px 1px #000;
+    box-sizing: border-box;
+    border:2px inset #7d7d7d;
+    border-radius:20px;
+}
+
 /* #endregion Landing Page CSS */
 
 /* #region Products */
@@ -314,5 +325,36 @@ input[type=range]+.thumb {
 nav ul li.active {
     background-color: rgba(0, 0, 0, 0.3);
 }
+.valign-wrapper{
+    justify-content: center;
+}
 
 /* #endregion Materialize CSS Overrides  */
+
+@media only screen and (max-width:992px){
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .caption > h1{
+        font-size:3rem;
+    }
+
+    .caption > h2{
+        font-size:1.9rem;
+    }
+
+    .caption > h3{
+        font-size:1.8rem;
+    }
+
+    .caption > h5{
+        font-size:1.5rem;
+    }
+
+    .slider .indicators .indicator-item{
+        height: 16px;
+        width: 16px;
+    }
+}

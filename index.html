@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" class="green lighten-5">
 
 <head>
     <meta charset="UTF-8">
@@ -94,7 +94,7 @@
         </ul>
     </section>
     <main id="landingPageMain" class="row">
-        <section class="col s9">
+        <section class="col l9">
             <h2 class="center-align">Nyheder i butikken</h2>
             <div class="row">
                 <div class="col s4">
@@ -112,14 +112,14 @@
                         src="images/products/768x768/hangekoje-denim-ecru-genbrug_768x768.jpg"
                         alt="Nyt produkt - Hængekøje af denim" title="Hængekøje af denim - genbrug">
                 </div>
-                <div class="col s6 offset-s3 d-flex">
+                <div class="col l6 offset-l3 s8 offset-s2 d-flex">
                     <a href="produkter.html" title="Se alle produkter"
                         class="btn waves-effect waves-light light-blue accent-2 mt-30__m-a">Se alle produkter
                         <i class="material-icons right">chevron_right</i>
                     </a>
                 </div>
             </div>
-            <article class="col s8 offset-s2 mt-30">
+            <article class="col l8 offset-l2 s12 mt-30">
                 <blockquote class="flow-text italic">
                     <q>Vi går ind for en økonomisk verden som sikrer at producenter i u-lande får en større
                         andel af de penge som handlen med deres egne produkter indbringer. <br> <br>
@@ -129,7 +129,7 @@
                 </blockquote>
                 <h6 class="italic">Poul - butikkens indehaver, 2019</h6>
             </article>
-            <article class="col s10 offset-s1 mt-30">
+            <article class="col l10 offset-l1 s12 mt-30">
                 <h3>Hvad er Fair Trade?</h3>
                 <p class="flow-text">
                     <b style="font-size:2rem;">Fair Trade</b> tager udgangspunkt i at producenter i den 3. verden,
@@ -157,7 +157,7 @@
                 </p>
             </article>
         </section>
-        <section class="col s3">
+        <section class="col l3 hide-on-med-and-down ">
             <div class="newsletter-section col s12">
                 <h4>Tilmeld nyhedsbrev</h4>
                 <div class="input-field col s12">
@@ -208,6 +208,64 @@
                 </li>
             </ul>
         </section>
+        <section class="show-on-medium-and-down">
+            <div class="row">
+                <div class="newsletter-section col m6 offset-m3 s12">
+                    <h4>Tilmeld nyhedsbrev</h4>
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                        <span class="helper-text" data-error="Indtast venligst en gyldig mail"
+                            data-success="Dette er en gyldig email">Indtast din email for at blive opskrevet</span>
+                        <button class="btn waves-effect waves-light light-blue accent-2 mt-15" type="submit"
+                            name="action">Tilmeld nyhedsbrev
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="previous-newsletters-header center-align">Forrige nyhedsbreve</h5>
+                        <div class="col m4 s12 parent center-align-s">
+                            <a class="modal-trigger" data-target="newsletterModal" href="#!" data-newsletter-month="maj"
+                                data-newsletter-year="2019">
+                                <div class="newsletter__tablet-down__month-header__container centered-content">
+                                    <h5>Nyhedsbrev</h5>
+                                    <h6>Maj 2019</h6>
+                                </div>
+                                <img class="latest-newsletters-img responsive-img"
+                                    src="images/frontpage/newsletters/thumbs/nyhedsbrev_maj_thumb.jpg"
+                                    alt="Nyhedsbrev maj 2019" title="Nyhedsbrev Maj 2019" />
+                            </a>
+                        </div>
+                        <div class="col m4 s12 parent center-align-s">
+                            <a class="modal-trigger" data-target="newsletterModal" href="#!"
+                                data-newsletter-month="april" data-newsletter-year="2019">
+                                <div class="newsletter__tablet-down__month-header__container centered-content">
+                                    <h5>Nyhedsbrev</h5>
+                                    <h6>April 2019</h6>
+                                </div>
+                                <img class="latest-newsletters-img responsive-img"
+                                    src="images/frontpage/newsletters/thumbs/nyhedsbrev_april_thumb.jpg"
+                                    alt="Nyhedsbrev april 2019" title="Nyhedsbrev April 2019" />
+                            </a>
+                        </div>
+                        <div class="col m4 s12 parent center-align-s">
+                            <a class="modal-trigger" data-target="newsletterModal" href="#!"
+                                data-newsletter-month="marts" data-newsletter-year="2019">
+                                <div class="newsletter__tablet-down__month-header__container centered-content">
+                                    <h5>Nyhedsbrev</h5>
+                                    <h6>Marts 2019</h6>
+                                </div>
+                                <img class="latest-newsletters-img responsive-img"
+                                    src="images/frontpage/newsletters/thumbs/nyhedsbrev_marts_thumb.jpg"
+                                    alt="Nyhedsbrev marts 2019" title="Nyhedsbrev Marts 2019" />
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
         <template id="newsletterTemplate">
             <h4>##newsletterModalHeader##</h4>
             <img class="responsive-img" src="##newsletterImgPath##" alt="Billede af Nyhedsbrev" title="Nyhedsbrev">
@@ -224,8 +282,68 @@
 
     <footer class="page-footer green darken-2">
         <div class="row">
-            <div class="col xl7 l7 m6 offset-m3 s12">
-                <div class="col xl4">
+            <div class="col xl5 l6 m12 s12">
+                <div class="col l6 m4 offset-m1 s8 offset-s2">
+                    <h4 class="white-text center-align">Åbningstider</h4>
+                    <table class="footer__open-times table-responsive highlight center-align">
+                        <tr>
+                            <td>Mandag</td>
+                            <td>10.00 - 17-30</td>
+                        </tr>
+                        <tr>
+                            <td>Tirsdag</td>
+                            <td>10.00 - 17.30</td>
+                        </tr>
+                        <tr>
+                            <td>Onsdag</td>
+                            <td>10.00 - 17.30</td>
+                        </tr>
+                        <tr>
+                            <td>Torsdag</td>
+                            <td>10.00 - 17.30</td>
+                        </tr>
+                        <tr>
+                            <td>Fredag</td>
+                            <td>10.00 - 18.00</td>
+                        </tr>
+                        <tr>
+                            <td>Lørdag</td>
+                            <td>10.00 - 16.00</td>
+                        </tr>
+                        <tr>
+                            <td>Søndag</td>
+                            <td>Lukket</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col l6 m4 offset-m2 s8 offset-s2 center-align">
+                    <h4 class="white-text">Kontakt</h4>
+                    <div class="col s12">
+                        <div class="col s12 ">
+                            <address class="grey-text text-lighten-4">
+                                <span class="bold">Fair Trade Bazaren</span> <br>
+                                Guldsmedegade 8a <br>
+                                8000 Aarhus C <br>
+                            </address>
+                        </div>
+                        <div class="col s12">
+
+                            <a class="footer-links tooltipped valign-wrapper" href="tel:86185111" data-position="top"
+                                data-tooltip="Du er velkommen til at ringe til os"
+                                aria-label="Du er velkommen til at ringe til os"><i
+                                    class="material-icons mr-5">local_phone</i>86 18 51 11</a>
+                        </div>
+                        <div class="col s12">
+                            <a class="footer-links tooltipped valign-wrapper" href="mailto:bazaren@fairbutik.dk"
+                                data-position="top" data-tooltip="Du er velkommen til at skrive til os"
+                                aria-label="Du er velkommen til at skrive til os">
+                                <i class="material-icons mr-5">email</i>bazaren@fairbutik.dk</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl7 m12 l6 s12">
+                <div class="col xl4 m6 s12">
                     <h5 class="white-text center-align">Leverandører</h5>
                     <ul class="footer-links-container">
                         <li class="center-align">
@@ -257,10 +375,9 @@
                                 data-position="top" data-tooltip="Landsorganisationen" target="_blank"
                                 aria-label="Landsorganisationen">U-landsforeningen Svalerne, landsorganisationen</a>
                         </li>
-
                     </ul>
                 </div>
-                <div class="col xl4">
+                <div class="col xl4 m6 s12">
                     <h5 class="white-text center-align">Producenter</h5>
                     <ul class="footer-links-container">
                         <li class="center-align"><a class="footer-links tooltipped" href="http://www.cjwbd.com/"
@@ -292,7 +409,7 @@
                                 aria-label="En producent fra Chile">Fundacion Chol-Chol, Chile</a></li>
                     </ul>
                 </div>
-                <div class="col xl4">
+                <div class="col xl4 m12 s12">
                     <h5 class="white-text center-align">Organisationer</h5>
                     <ul class="footer-links-container">
                         <li class="center-align"><a class="footer-links tooltipped" href="http://www.wfto.com/"
@@ -314,69 +431,6 @@
                                 Labelling Organizations International</a></li>
 
                     </ul>
-                </div>
-
-            </div>
-            <div class="col xl2 l2 m6 offset-m3 s12">
-                <h4 class="white-text center-align">Åbningstider</h4>
-                <table class="footer__open-times table-responsive highlight center-align">
-                    <tr>
-                        <td>Mandag</td>
-                        <td>10.00 - 17-30</td>
-                    </tr>
-                    <tr>
-                        <td>Tirsdag</td>
-                        <td>10.00 - 17.30</td>
-                    </tr>
-                    <tr>
-                        <td>Onsdag</td>
-                        <td>10.00 - 17.30</td>
-                    </tr>
-                    <tr>
-                        <td>Torsdag</td>
-                        <td>10.00 - 17.30</td>
-                    </tr>
-                    <tr>
-                        <td>Fredag</td>
-                        <td>10.00 - 18.00</td>
-                    </tr>
-                    <tr>
-                        <td>Lørdag</td>
-                        <td>10.00 - 16.00</td>
-                    </tr>
-                    <tr>
-                        <td>Søndag</td>
-                        <td>Lukket</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col xl3 l3 m6 offset-m3 s12">
-                <h4 class="white-text center-align">Kontakt</h4>
-                <div class="col l7 offset-l3 m8 offset-m2 s12">
-                    <div class="col s12">
-                        <address class="grey-text text-lighten-4">
-                            <span class="bold">Fair Trade Bazaren</span> <br>
-                            Guldsmedegade 8a <br>
-                            8000 Aarhus C <br>
-                        </address>
-                    </div>
-                    <div class="col s12">
-                        <div class="valign-wrapper">
-                            <i class="material-icons mr-5">local_phone</i>
-                            <a class="footer-links tooltipped" href="tel:86185111" data-position="top"
-                                data-tooltip="Du er velkommen til at ringe til os"
-                                aria-label="Du er velkommen til at ringe til os">86 18 51 11</a>
-                        </div>
-                    </div>
-                    <div class="col s12">
-                        <div class="valign-wrapper">
-                            <i class="material-icons mr-5">email</i>
-                            <a class="footer-links tooltipped" href="mailto:bazaren@fairbutik.dk" data-position="top"
-                                data-tooltip="Du er velkommen til at skrive til os"
-                                aria-label="Du er velkommen til at skrive til os">
-                                bazaren@fairbutik.dk</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
