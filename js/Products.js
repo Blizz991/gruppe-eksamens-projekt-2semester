@@ -1,9 +1,16 @@
-var maxProductsToDisplay = 10;
-var currentMinPrice = 100;
-var currentMaxPrice = 1000;
+//Global variables
+let maxProductsToDisplay = 10;
+let currentMinPrice = 100;
+let currentMaxPrice = 1000;
+let currentFilters = new Filters(
+    "",
+    null
+);
+const productTemplate = $('#productTemplate');
 
-function FilterTypes(All, Scarf, Mat, Hammock, Basket) {
-    this.All = All;
+
+//#region Constructors
+function FilterTypes(Scarf = null, Mat = null, Hammock = null, Basket = null) {
     this.Scarf = Scarf;
     this.Mat = Mat;
     this.Hammock = Hammock;
@@ -18,10 +25,6 @@ function Filters(Query, Types, MinPrice = currentMinPrice, MaxPrice = currentMax
     this.maxProductsToDisplay = maxProductsToDisplay;
 }
 
-function updateFilters() {
-
-}
-
 function Product(Name, Description, Price, Type, ImgName, ImgType) {
     this.Name = Name;
     this.Description = Description;
@@ -30,9 +33,7 @@ function Product(Name, Description, Price, Type, ImgName, ImgType) {
     this.ImgName = ImgName;
     this.ImgType = ImgType;
 }
-
-
-
+//#endregion Constructors
 
 var products = [
     new Product(
@@ -285,26 +286,7 @@ $(document).ready(function () {
     });
     //#endregion Price range handler
 
-    // let shuffledProducts = shuffleArray(products);
-    let productTemplate = $('#productTemplate');
-
-    for (let index = 0; index < 10; index++) {
-        // const product = shuffledProducts[index];
-        const product = products[index];
-        let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
-
-        let newProduct = productTemplate.html()
-            .replace('##productImgSrc##', imgPath)
-            .replace('##productImgName##', product.ImgName)
-            .replace('##productImgType##', product.ImgType)
-            .replace('##productImgAltText##', product.Name)
-            .replace('##productImgTitleText##', product.Name)
-            .replace('##productName##', product.Name)
-            .replace('##productDescription##', product.Description)
-            .replace('##productPrice##', product.Price)
-            .replace('##productType##', product.Type);
-        $(newProduct).prependTo($('#productsContainer'));
-    }
+    displayProducts(productTemplate);
 
     $(document).on("click", ".modal-trigger", function (e) {
         let productName = $(this).data('product-name');
@@ -339,6 +321,32 @@ $(document).ready(function () {
     // });
 
 });
+
+function displayProducts(productTemplate) {
+    for (let index = 0; index < maxProductsToDisplay; index++) {
+        const product = products[index];
+        let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
+        let newProduct = productTemplate.html()
+            .replace('##productImgSrc##', imgPath)
+            .replace('##productImgName##', product.ImgName)
+            .replace('##productImgType##', product.ImgType)
+            .replace('##productImgAltText##', product.Name)
+            .replace('##productImgTitleText##', product.Name)
+            .replace('##productName##', product.Name)
+            .replace('##productDescription##', product.Description)
+            .replace('##productPrice##', product.Price)
+            .replace('##productType##', product.Type);
+        $(newProduct).prependTo($('#productsContainer'));
+    }
+}
+
+function updateFilters() {
+    
+}
+
+function updateProductDisplay(){
+
+}
 
 /*
  * Randomize array element order in-place.
