@@ -67,49 +67,62 @@
                     <div class="collapsible-header"><i class="material-icons">filter_list</i>Filtre</div>
                     <div class="collapsible-body">
                         <div class="input-field">
-                            <input id="productSearch" type="search">
+                            <input id="productSearch" type="search" data-filter="Query" onchange="updateFilters()">
                             <label for="productSearch">Søg</label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" checked="checked" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="All" checked="checked" />
                                 <span>Vis alle</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Scarf" />
                                 <span>Tørklæder</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Mat" />
                                 <span>Måtter</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Hammock" />
                                 <span>Hængekøjer</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Basket" />
                                 <span>Kurve</span>
                             </label>
                         </div>
-                        <h6>Max pris</h6>
+                        <h6 class="mb-30">Max pris</h6>
                         <form action="#">
-                            <p class="range-field">
+                            <!-- <p class="range-field">
                                 <input type="range" id="priceMaxPriceSlider" min="0" max="945" />
-                            </p>
-                            <div class="input-field">
-                                <input id="productMaxPrice" min="0" type="number">
-                                <label for="productMaxPrice">Max pris</label>
+                            </p> -->
+                            <div id="limitPriceSlider"></div>
+                            <div class="row mt-15">
+                                <div class="col s12 m6">
+                                    <div class="input-field">
+                                        <input id="productMinPrice" min="100" max="1000" value="100" type="number">
+                                        <label for="productMinPrice">Min pris</label>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6">
+                                    <div class="input-field">
+                                        <input id="productMaxPrice" min="200" max="1000" value="1000" type="number">
+                                        <label for="productMaxPrice">Max pris</label>
+                                    </div>
+                                </div>
                             </div>
+                            
                         </form>
+                        
                     </div>
                 </li>
             </ul>
@@ -328,15 +341,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Slim version hvis vi ikke har behov for alle funktionerne -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.js"></script>
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <script src="js/nouislider.min.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Our javascript -->
-    <script src="js/MainScript.min.js"></script>
-    <script src="js/Products.min.js"></script>
-    <!-- <script src="js/MainScript.js"></script>
-    <script src="js/Products.js"></script> -->
+    <!-- <script src="js/MainScript.min.js"></script>
+    <script src="js/Products.min.js"></script> -->
+    <script src="js/MainScript.js"></script>
+    <script src="js/Products.js"></script>
 </body>
 
 </html>

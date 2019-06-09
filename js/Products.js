@@ -1,3 +1,27 @@
+var maxProductsToDisplay = 10;
+var currentMinPrice = 100;
+var currentMaxPrice = 1000;
+
+function FilterTypes(All, Scarf, Mat, Hammock, Basket) {
+    this.All = All;
+    this.Scarf = Scarf;
+    this.Mat = Mat;
+    this.Hammock = Hammock;
+    this.Basket = Basket;
+}
+
+function Filters(Query, Types, MinPrice = currentMinPrice, MaxPrice = currentMaxPrice, maxProductsToDisplay = 10) {
+    this.Query = Query;
+    this.Types = Types;
+    this.MinPrice = MinPrice;
+    this.MaxPrice = MaxPrice;
+    this.maxProductsToDisplay = maxProductsToDisplay;
+}
+
+function updateFilters() {
+
+}
+
 function Product(Name, Description, Price, Type, ImgName, ImgType) {
     this.Name = Name;
     this.Description = Description;
@@ -7,12 +31,15 @@ function Product(Name, Description, Price, Type, ImgName, ImgType) {
     this.ImgType = ImgType;
 }
 
+
+
+
 var products = [
     new Product(
         "Tørklæde silke batik (Bangladesh)", //Name
         "Tørklæde, silke, batik, Bangladesh", //Description
         149, //Price
-        "Tørklæde", //Type
+        "Scarf", //Type
         "torklade-silke-batik_bangladesh", //ImgName
         "jpg" //ImgType
     ),
@@ -20,7 +47,7 @@ var products = [
         "Tørklæde af silke (Bangladesh",
         "Sjal, silke & bomuld, 72x228 cm., Bangladesh",
         185,
-        "Tørklæde",
+        "Scarf",
         "torklade-silke_bangladesh",
         "jpg"
     ),
@@ -28,7 +55,7 @@ var products = [
         "Tørklæde fra Palæstina",
         "Palæstinensertørklæde, 110x110 cm., Palæstina",
         220,
-        "Tørklæde",
+        "Scarf",
         "torklade-palestina",
         "jpg"
     ),
@@ -36,7 +63,7 @@ var products = [
         "Tørklæde med broderi",
         "Sjal vorate broderi på uld, 200x85 cm., Bangladesh",
         395,
-        "Tørklæde",
+        "Scarf",
         "torklade-vorate-broderi",
         "jpg"
     ),
@@ -44,7 +71,7 @@ var products = [
         "Tørklæde med bloktryk",
         "Tørklæde, bomuld, bloktryk, Bangladesh",
         85,
-        "Tørklæde",
+        "Scarf",
         "torklade-bloktryk_bangladesh",
         "jpg"
     ),
@@ -52,7 +79,7 @@ var products = [
         "Tørklæde af viscose",
         "Tørklæde, viscose, bloktryk, Bangladesh",
         95,
-        "Tørklæde",
+        "Scarf",
         "torklade-af-viscose",
         "jpg"
     ),
@@ -60,7 +87,7 @@ var products = [
         "Måtte af kokosbast, hund (Bangladesh)",
         "Måtte af kokosbast, hund, 60x30 cm., fra Bangladesh",
         275,
-        "Måtte",
+        "Mat",
         "matte-af-kokosbast-hund_bangladesh",
         "jpg"
     ),
@@ -68,7 +95,7 @@ var products = [
         "Måtte af kokosbast, flodhest (Bangladesh)",
         "Måtte af kokosbast, flodhest, 60x48 cm., Bangladesh",
         325,
-        "Måtte",
+        "Mat",
         "matte-af-kokosbast-flodhest_bangladesh",
         "jpg"
     ),
@@ -76,7 +103,7 @@ var products = [
         "Måtte af kokosbast, kat (Bangladesh)",
         "Måtte af kokosbast, kat, 63x38 cm., Bangladesh",
         225,
-        "Måtte",
+        "Mat",
         "matte-af-kokosbast-kat_bangladesh",
         "jpg"
     ),
@@ -84,7 +111,7 @@ var products = [
         "Måtte af kokosbast, gris (Bangladesh)",
         "Måtte af kokosbast, gris, 63x39 cm., Bangladesh",
         325,
-        "Måtte",
+        "Mat",
         "matte-af-kokosbast-gris_bangladesh",
         "jpg"
     ),
@@ -92,7 +119,7 @@ var products = [
         "Dørmåtte sol (Indien)",
         "Dørmåtte sol. Kokosbast på gummibund, 74x45 cm., Indien",
         215,
-        "Måtte",
+        "Mat",
         "matte-sol_indien",
         "jpg"
     ),
@@ -100,7 +127,7 @@ var products = [
         "Slidstærk sommerfuglemåtte (Bangladesh)",
         "Slidstærk måtte, kokosbast, Sommerfugl, div. farver, 60x32 cm., Bangladesh",
         185,
-        "Måtte",
+        "Mat",
         "matte-sommerfugl_bangladesh",
         "jpg"
     ),
@@ -108,7 +135,7 @@ var products = [
         "Denim genbrug med lomme",
         "Bred hængekøje til 1 person med lomme",
         585,
-        "Hængekøje",
+        "Hammock",
         "hangekoje-denim-genbrug",
         "jpg"
     ),
@@ -116,7 +143,7 @@ var products = [
         "Off White med grå klunker",
         "Hængekøje med grå klunker, af vævet bomuld til 1 person",
         735,
-        "Hængekøje",
+        "Hammock",
         "hangekoje-off-white",
         "jpg"
     ),
@@ -124,7 +151,7 @@ var products = [
         "Denim + ecru genbrug",
         "Hængekøjge til 1-2 personer. Bæreevne: 140 kg.",
         945,
-        "Hængekøje",
+        "Hammock",
         "hangekoje-denim-ecru-genbrug",
         "jpg"
     ),
@@ -132,7 +159,7 @@ var products = [
         "Caipirinha",
         "Hængekøje med barrer til 1 person af vævet bomuld fra El Salvador",
         575,
-        "Hængekøje",
+        "Hammock",
         "hangekoje-caipirinha",
         "jpg"
     ),
@@ -140,7 +167,7 @@ var products = [
         "Pina Colada",
         "Hængekøje med barrer til 1 person af vævet bomuld fra El Salvador",
         575,
-        "Hængekøje",
+        "Hammock",
         "hangekoje-pina-colada",
         "jpg"
     ),
@@ -148,7 +175,7 @@ var products = [
         "Nikolina",
         "Hængekøje med barrer til 1 person af vævet bomuld fra El Salvador",
         575,
-        "Hængekøje",
+        "Hammock",
         "hangekoje-nikolina",
         "jpg"
     ),
@@ -156,7 +183,7 @@ var products = [
         "Lille vasketøjskurv (Bangladesh)",
         "Lille vasketøjskurv, farvet Kaisa-græs + snor af bomuld, 30x34 cm., Bangladesh",
         269,
-        "Kurv",
+        "Basket",
         "kurv-lille-bangladesh",
         "jpg"
     ),
@@ -164,7 +191,7 @@ var products = [
         "Kubisk U-kurv",
         "Kubisk U-kurv af Hogla-siv + jute, 28x28x28 cm., Bangladesh",
         169,
-        "Kurv",
+        "Basket",
         "kurv-kubisk-u",
         "jpg"
     ),
@@ -172,7 +199,7 @@ var products = [
         "Grå kurv med orange kant",
         "Grå kurv m/orange kant, vævet jute, 30x30 cm., Bangladesh",
         185,
-        "Kurv",
+        "Basket",
         "kurv-gra-orange",
         "jpg"
     ),
@@ -180,7 +207,7 @@ var products = [
         "Stribet kurv (Bangladesh)",
         "Stribet kurve af vævet jute, 27x27 cm., Bangladesh",
         149,
-        "Kurv",
+        "Basket",
         "kurv-stribet-bangladesh",
         "jpg"
     ),
@@ -188,7 +215,7 @@ var products = [
         "Kurv af palmeblade",
         "Kurv af palmeblade, dia. 18 cm., Bangladesh",
         39,
-        "Kurv",
+        "Basket",
         "kurv-palmeblade",
         "jpg"
     ),
@@ -196,7 +223,7 @@ var products = [
         "Zigzag kurv (Bangladesh)",
         "Zigzag kurve af vævet jute, stor, 32x15 cm., Bangladesh",
         139,
-        "Kurv",
+        "Basket",
         "kurv-zigzag-bangladesh",
         "jpg"
     ),
@@ -207,7 +234,7 @@ var products = [
 $(document).ready(function () {
     $('.modal').modal({
         onCloseStart: function () {
-            //Make sure modal's scroll is reset everytime it reopens
+            //Make sure modal's scroll is reset every time it reopens
             $('.modal-content').scrollTop(0);
         }
     });
@@ -215,15 +242,55 @@ $(document).ready(function () {
         accordion: false
     });
 
-    //Make max slide default to max -- currently doesn't work, as the input isn't being updated
-    $('#priceSlider').val(945);
-    //TODO: Usability!
+    //#region Price range handler
+    let slider = document.getElementById('limitPriceSlider');
+    noUiSlider.create(slider, {
+        start: [100, 1000],
+        connect: true,
+        margin: 100,
+        step: 10,
+        orientation: 'horizontal',
+        animate: true,
+        animationDuration: 300,
+        tooltips: [true, wNumb({ decimals: 0, suffix: ' kr.' })],
+        range: {
+            'min': 100,
+            'max': 1000
+        },
+        format: wNumb({
+            decimals: 0,
+            suffix: ' kr.'
+        })
+    });
 
-    let shuffledProducts = shuffleArray(products);
+    slider.noUiSlider.on('change',
+        function () {
+            let minPrice = slider.noUiSlider.get()[0]; //First handle
+            let maxPrice = slider.noUiSlider.get()[1]; //Second handle
+            $('#productMinPrice').val(minPrice);
+            currentMinPrice = minPrice;
+            $('#productMaxPrice').val(maxPrice);
+            currentMaxPrice = maxPrice;
+        }
+    );
+
+    $('#productMinPrice').change(function () {
+        currentMinPrice = this.value;
+        slider.noUiSlider.set([this.value, currentMaxPrice]);
+    });
+
+    $('#productMaxPrice').change(function () {
+        currentMaxPrice = this.value;
+        slider.noUiSlider.set([currentMinPrice, this.value]);
+    });
+    //#endregion Price range handler
+
+    // let shuffledProducts = shuffleArray(products);
     let productTemplate = $('#productTemplate');
 
     for (let index = 0; index < 10; index++) {
-        const product = shuffledProducts[index];
+        // const product = shuffledProducts[index];
+        const product = products[index];
         let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
 
         let newProduct = productTemplate.html()
@@ -261,17 +328,17 @@ $(document).ready(function () {
         $('.collapsible').collapsible('open');
     };
 
-        // $(window).resize(function () {
-        //     clearTimeout(window.resizedFinished);
-        //     window.resizedFinished = setTimeout(function () {
-        //         if ($(window).width() < 1200) {
-        //             $('.collapsible').collapsible('close');
-        //             console.log('Collapse!');
-        //         }
-        //     }, 250);
-        // });
+    // $(window).resize(function () {
+    //     clearTimeout(window.resizedFinished);
+    //     window.resizedFinished = setTimeout(function () {
+    //         if ($(window).width() < 1200) {
+    //             $('.collapsible').collapsible('close');
+    //             console.log('Collapse!');
+    //         }
+    //     }, 250);
+    // });
 
-    });
+});
 
 /*
  * Randomize array element order in-place.
