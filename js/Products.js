@@ -1,7 +1,7 @@
 //Global variables
 let maxProductsToDisplay = 100;
 let currentProductsIndex = 0;
-let currentMinPrice = 100;
+let currentMinPrice = 0;
 let currentMaxPrice = 1000;
 let currentFilters = new Filters(); //No filters
 let slider = document.getElementById('limitPriceSlider'); //Not using Jquery because we only want the single element
@@ -10,7 +10,7 @@ const productTemplate = $('#productTemplate');
 
 //#region Constructors
 
-function Filters(Query = "", Types = [] /* Empty = show all */, MinPrice = 100, MaxPrice = 1000) {
+function Filters(Query = "", Types = [] /* Empty = show all */, MinPrice = 0, MaxPrice = 1000) {
     this.Query = Query;
     this.Types = Types;
     this.MinPrice = MinPrice;
@@ -264,6 +264,7 @@ $(document).ready(function () {
     //#region Price range handler
     noUiSlider.create(slider, {
         start: [($('#productMinPrice').val()), ($('#productMaxPrice').val())],
+        behaviour: 'tap',
         connect: true,
         margin: 100,
         step: 10,
@@ -272,7 +273,7 @@ $(document).ready(function () {
         animationDuration: 300,
         tooltips: [true, wNumb({ decimals: 0, suffix: ' kr.' })],
         range: {
-            'min': 100,
+            'min': 0,
             'max': 1000
         },
         format: wNumb({
@@ -368,7 +369,7 @@ function displayProducts(filteredProducts) {
             index++
         }
     } else {
-        $($('<h4/>').text("Der var desværre ingen produkter der matchede dine filtre...")).prependTo($('#productsContainer'));
+        $($('<div/>').addClass('col s12').append($('<h4/>').text("Der var desværre ingen produkter der matchede dine filtre..."))).prependTo($('#productsContainer'));
     }
 
 
@@ -410,7 +411,7 @@ function resetFilters() {
     $('input:checkbox').prop('checked', false);
    
     //Reset price range to default
-    currentMinPrice = 100;
+    currentMinPrice = 0;
     currentMaxPrice = 1000;
     slider.noUiSlider.set([currentMinPrice, currentMaxPrice]);
 
