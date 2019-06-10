@@ -31,3 +31,13 @@ $(document).on("click", ".modal-trigger", function (e) {
             .replace('##newsletterImgPath##', imgPath);
     $('#newsletterModalContent').html(newsletterToDisplay);
 });
+
+function subscribeNewsletter() {
+    if (!($('#newsletterEmail').hasClass('invalid'))) {
+        M.toast({ html: 'Du er nu tilmeldt nyhedsbrevet' }); //Show confirmation toast
+        $('#newsletterEmail').val(''); //Empty newsletter email input
+        $('#newsletterEmail').removeClass('valid invalid'); //Reset validation state
+        M.updateTextFields();
+    }
+
+}
