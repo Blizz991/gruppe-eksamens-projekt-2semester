@@ -354,6 +354,25 @@ function displayProducts(filteredProducts) {
         //the max products to display, or we're displaying products that should be displayed
         while (index < maxProductsToDisplay && index < filteredProducts.length) {
             const product = filteredProducts[index];
+            let productType;
+            //Translation because I refuse to write danish in code...
+            switch (product.Type) {
+                case "Scarf":
+                    productType = "Tørklæde"
+                    break;
+                case "Mat":
+                    productType = "Måtte"
+                    break;
+                case "Hammock":
+                    productType = "Hængekøjer"
+                    break;
+                case "Basket":
+                    productType = "Kurve"
+                    break;
+                default:
+                    productType = product.productType
+                    break;
+            }
             let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
             let newProduct = productTemplate.html()
                 .replace('##productImgSrc##', imgPath)
@@ -364,15 +383,14 @@ function displayProducts(filteredProducts) {
                 .replace('##productName##', product.Name)
                 .replace('##productDescription##', product.Description)
                 .replace('##productPrice##', product.Price)
-                .replace('##productType##', product.Type);
+                .replace('##productInfoPrice##',product.Price)
+                .replace('##productType##', productType);
             $(newProduct).prependTo($('#productsContainer'));
             index++
         }
     } else {
         $($('<div/>').addClass('col s12').append($('<h4/>').text("Der var desværre ingen produkter der matchede dine filtre..."))).prependTo($('#productsContainer'));
     }
-
-
 }
 
 function applyFilters(element) {
@@ -409,7 +427,7 @@ function resetFilters() {
     $('#productSearch').val('');
     //Reset all checkboxes
     $('input:checkbox').prop('checked', false);
-   
+
     //Reset price range to default
     currentMinPrice = 0;
     currentMaxPrice = 1000;
@@ -417,7 +435,7 @@ function resetFilters() {
 
     $('#productMinPrice').val(currentMinPrice);
     $('#productMaxPrice').val(currentMaxPrice);
-    
+
     updateProductDisplay(currentFilters);
 }
 

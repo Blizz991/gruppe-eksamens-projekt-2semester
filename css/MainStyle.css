@@ -180,6 +180,15 @@ nav .sidenav-trigger {
     top: 60px;
 }
 
+.product-info{
+    /* width:100%; */
+    margin:0;
+    /* text-align:right; */
+    color:#fff;
+    background:rgba(0, 0, 0, 0.5);
+    padding:1rem;
+}
+
 /* #endregion Products */
 
 /* #region About us */
@@ -272,6 +281,12 @@ nav .sidenav-trigger {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.bottom-right-centered-content{
+    position: absolute;
+    bottom:0;
+    right:0;
 }
 
 .responsive-img {
@@ -369,6 +384,14 @@ nav ul li.active {
 
 .keyboard-focused .collapsible-header:focus {
     background: initial;
+}
+
+#filterContainer label{
+    white-space: nowrap;
+}
+
+#filterContainer {
+    padding:0 2rem 2rem;
 }
 
 /* #endregion Materialize CSS Overrides  */
