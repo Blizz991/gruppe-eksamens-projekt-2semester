@@ -33,7 +33,7 @@ $(document).on("click", ".modal-trigger", function (e) {
 });
 
 function subscribeNewsletter() {
-    if (!($('#newsletterEmail').hasClass('invalid'))) {
+    if (!($('#newsletterEmail').hasClass('invalid')) && $('#newsletterEmail').val() !== "") {
         M.toast({ html: 'Du er nu tilmeldt nyhedsbrevet' }); //Show confirmation toast
         $('#newsletterEmail').val(''); //Empty newsletter email input
         $('#newsletterEmail').removeClass('valid invalid'); //Reset validation state
