@@ -1,28 +1,46 @@
 //Global variables
-let maxProductsToDisplay = 10;
+let maxProductsToDisplay = 100;
+let currentProductsIndex = 0;
 let currentMinPrice = 100;
 let currentMaxPrice = 1000;
-let currentFilters = new Filters(
-    "",
-    null
-);
+let currentFilters = new Filters(); //No filters
+let slider = document.getElementById('limitPriceSlider'); //Not using Jquery because we only want the single element
 const productTemplate = $('#productTemplate');
 
 
 //#region Constructors
-function FilterTypes(Scarf = null, Mat = null, Hammock = null, Basket = null) {
-    this.Scarf = Scarf;
-    this.Mat = Mat;
-    this.Hammock = Hammock;
-    this.Basket = Basket;
-}
 
-function Filters(Query, Types, MinPrice = currentMinPrice, MaxPrice = currentMaxPrice, maxProductsToDisplay = 10) {
+function Filters(Query = "", Types = [] /* Empty = show all */, MinPrice = 100, MaxPrice = 1000) {
     this.Query = Query;
     this.Types = Types;
     this.MinPrice = MinPrice;
     this.MaxPrice = MaxPrice;
-    this.maxProductsToDisplay = maxProductsToDisplay;
+    this.ProductMatchesFilter = function (product) {
+        let filterMatches = true;
+
+        if (this.Query !== "") {
+            filterMatches = product.Name.includes(this.Query) || product.Description.includes(this.Query);
+        }
+
+        //If there is something present in the Types array.
+        if (filterMatches && this.Types.length !== 0) {
+            //If The product's type exists in the filter types
+            if (this.Types.indexOf(product.Type) !== -1) {
+                filterMatches = true;
+            } else {
+                filterMatches = false;
+            }
+        }
+
+        if (filterMatches && product.Price >= this.MinPrice && product.Price <= this.MaxPrice) {
+            filterMatches = true;
+        } else {
+            filterMatches = false;
+        }
+
+        //If nothing matches, product should not be displayed
+        return filterMatches;
+    }
 }
 
 function Product(Name, Description, Price, Type, ImgName, ImgType) {
@@ -244,9 +262,8 @@ $(document).ready(function () {
     });
 
     //#region Price range handler
-    let slider = document.getElementById('limitPriceSlider');
     noUiSlider.create(slider, {
-        start: [100, 1000],
+        start: [($('#productMinPrice').val()), ($('#productMaxPrice').val())],
         connect: true,
         margin: 100,
         step: 10,
@@ -269,24 +286,29 @@ $(document).ready(function () {
             let minPrice = slider.noUiSlider.get()[0]; //First handle
             let maxPrice = slider.noUiSlider.get()[1]; //Second handle
             $('#productMinPrice').val(minPrice);
-            currentMinPrice = minPrice;
+            currentFilters.MinPrice = minPrice;
             $('#productMaxPrice').val(maxPrice);
-            currentMaxPrice = maxPrice;
+            currentFilters.MaxPrice = maxPrice;
+
+            updateProductDisplay(currentFilters);
         }
     );
 
     $('#productMinPrice').change(function () {
         currentMinPrice = this.value;
         slider.noUiSlider.set([this.value, currentMaxPrice]);
+        updateProductDisplay(currentFilters);
     });
 
     $('#productMaxPrice').change(function () {
         currentMaxPrice = this.value;
         slider.noUiSlider.set([currentMinPrice, this.value]);
+        updateProductDisplay(currentFilters);
     });
     //#endregion Price range handler
 
-    displayProducts(productTemplate);
+    //Initial product display
+    displayProducts(products);
 
     $(document).on("click", ".modal-trigger", function (e) {
         let productName = $(this).data('product-name');
@@ -322,30 +344,80 @@ $(document).ready(function () {
 
 });
 
-function displayProducts(productTemplate) {
-    for (let index = 0; index < maxProductsToDisplay; index++) {
-        const product = products[index];
-        let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
-        let newProduct = productTemplate.html()
-            .replace('##productImgSrc##', imgPath)
-            .replace('##productImgName##', product.ImgName)
-            .replace('##productImgType##', product.ImgType)
-            .replace('##productImgAltText##', product.Name)
-            .replace('##productImgTitleText##', product.Name)
-            .replace('##productName##', product.Name)
-            .replace('##productDescription##', product.Description)
-            .replace('##productPrice##', product.Price)
-            .replace('##productType##', product.Type);
-        $(newProduct).prependTo($('#productsContainer'));
+function displayProducts(filteredProducts) {
+    $('#productsContainer').html('');
+    let index = 0;
+
+    if (filteredProducts.length > 0) {
+        //Keep adding products to the product view, as long as we're not above
+        //the max products to display, or we're displaying products that should be displayed
+        while (index < maxProductsToDisplay && index < filteredProducts.length) {
+            const product = filteredProducts[index];
+            let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
+            let newProduct = productTemplate.html()
+                .replace('##productImgSrc##', imgPath)
+                .replace('##productImgName##', product.ImgName)
+                .replace('##productImgType##', product.ImgType)
+                .replace('##productImgAltText##', product.Name)
+                .replace('##productImgTitleText##', product.Name)
+                .replace('##productName##', product.Name)
+                .replace('##productDescription##', product.Description)
+                .replace('##productPrice##', product.Price)
+                .replace('##productType##', product.Type);
+            $(newProduct).prependTo($('#productsContainer'));
+            index++
+        }
+    } else {
+        $($('<h4/>').text("Der var desværre ingen produkter der matchede dine filtre...")).prependTo($('#productsContainer'));
     }
+
+
 }
 
-function updateFilters() {
+function applyFilters(element) {
+    let filter = $(element);
+    let filterType = filter.data('filter');
+    let filterState; //Only used if element is a checkbox
+    if (filter.is(':checkbox')) {
+        filterState = filter.prop('checked');
+    }
+
+    if (filterType == "All") {
+    } else if (filterType == "Query") {
+        currentFilters.Query = filter.val();
+    } else {
+        if (filterState) {
+            currentFilters.Types.push(filterType);
+        } else {
+            currentFilters.Types.splice($.inArray(filterType, currentFilters.Types), 1);
+        }
+    }
+    updateProductDisplay(currentFilters);
+}
+
+function updateProductDisplay(filterToApply) {
+    let filteredProducts = products.filter(function (product, i) {
+        return filterToApply.ProductMatchesFilter(product);
+    });
+    displayProducts(filteredProducts);
+}
+
+function resetFilters() {
+    currentFilters = new Filters();
+
+    $('#productSearch').val('');
+    //Reset all checkboxes
+    $('input:checkbox').prop('checked', false);
+   
+    //Reset price range to default
+    currentMinPrice = 100;
+    currentMaxPrice = 1000;
+    slider.noUiSlider.set([currentMinPrice, currentMaxPrice]);
+
+    $('#productMinPrice').val(currentMinPrice);
+    $('#productMaxPrice').val(currentMaxPrice);
     
-}
-
-function updateProductDisplay(){
-
+    updateProductDisplay(currentFilters);
 }
 
 /*

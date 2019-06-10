@@ -26,10 +26,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/MainStyle.min.css">
     <!-- <link rel="stylesheet" href="css/MainStyle.css"> -->
-    <script>
+    <style>
+        #filterContainer label{
+            white-space: nowrap;
+        }
 
-
-    </script>
+        #filterContainer {
+            padding:0 2rem 2rem;
+        }
+    </style>
 </head>
 
 <body class="green lighten-5">
@@ -65,84 +70,93 @@
             <ul class="collapsible expandable white">
                 <li>
                     <div class="collapsible-header"><i class="material-icons">filter_list</i>Filtre</div>
-                    <div class="collapsible-body">
+                    <div id="filterContainer" class="collapsible-body">
                         <div class="input-field">
-                            <input id="productSearch" type="search" data-filter="Query" onchange="updateFilters()">
+                            <input id="productSearch" type="search" data-filter="Query" onchange="applyFilters(this)">
                             <label for="productSearch">Søg</label>
                         </div>
-                        <div class="checkbox-container">
+                        <!-- <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="All" checked="checked" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="All"
+                                    checked="checked" onchange="applyFilters(this)" />
                                 <span>Vis alle</span>
                             </label>
-                        </div>
+                        </div> -->
+                        <h6>Produkt Typer</h6>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Scarf" />
+                                <input id="" type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Scarf"
+                                    onchange="applyFilters(this)" />
                                 <span>Tørklæder</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Mat" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Mat"
+                                    onchange="applyFilters(this)" />
                                 <span>Måtter</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Hammock" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Hammock"
+                                    onchange="applyFilters(this)" />
                                 <span>Hængekøjer</span>
                             </label>
                         </div>
                         <div class="checkbox-container">
                             <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Basket" />
+                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Basket"
+                                    onchange="applyFilters(this)" />
                                 <span>Kurve</span>
                             </label>
                         </div>
-                        <h6 class="mb-30">Max pris</h6>
+                        <h6 class="mb-30">Pris mellem (kr.)</h6>
                         <form action="#">
                             <!-- <p class="range-field">
                                 <input type="range" id="priceMaxPriceSlider" min="0" max="945" />
                             </p> -->
                             <div id="limitPriceSlider"></div>
                             <div class="row mt-15">
-                                <div class="col s12 m6">
+                                <div class="col s12 l6">
                                     <div class="input-field">
                                         <input id="productMinPrice" min="100" max="1000" value="100" type="number">
                                         <label for="productMinPrice">Min pris</label>
                                     </div>
                                 </div>
-                                <div class="col s12 m6">
+                                <div class="col s12 l6">
                                     <div class="input-field">
                                         <input id="productMaxPrice" min="200" max="1000" value="1000" type="number">
                                         <label for="productMaxPrice">Max pris</label>
                                     </div>
                                 </div>
                             </div>
-                            
                         </form>
-                        
+                        <button class="waves-effect waves-light btn-small" onclick="resetFilters()">
+                            <i class="material-icons right">close</i>Nulstil alle filtre
+                        </button>
                     </div>
                 </li>
             </ul>
         </div>
-        <div id="productsContainer" class="row">
-            <div class="row">
-                <div class="col s12">
-                    <ul class="pagination center">
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                        <li class="active"><a href="#!">1</a></li>
-                        <li class="waves-effect"><a href="#!">2</a></li>
-                        <li class="waves-effect"><a href="#!">3</a></li>
-                        <li class="waves-effect"><a href="#!">4</a></li>
-                        <li class="waves-effect"><a href="#!">5</a></li>
-                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                    </ul>
-                </div>
+        <div class="col xl10">
+            <div id="productsContainer" class="row">
+
             </div>
         </div>
-
+        <!-- <div class="row">
+            <div class="col s12">
+                <ul class="pagination center">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+            </div>
+        </div> -->
         <template id="productTemplate">
             <div class="col xl2 l4 m6 s12 product-img-container">
                 <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
@@ -173,7 +187,7 @@
             <div id="productModalContent" class="modal-content">
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close red btn-small modal-action modal-close btn-flat">Luk</a>
+                <button class="modal-close red btn-small modal-action modal-close btn-flat">Luk</button>
             </div>
         </div>
     </main>
