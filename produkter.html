@@ -123,9 +123,24 @@
                                 </div>
                             </div>
                         </form>
+                        <div class="input-field col s12">
+                            <select id="sortProductsSelect">
+                                <option value="" disabled selected>Vælg sortering</option>
+                                <option value="NameAsc">Navn A-Z</option>
+                                <option value="NameDesc">Navn Z-A</option>
+                                <option value="PriceAsc">Pris Stigende</option>
+                                <option value="PriceDesc">Pris Faldende</option>
+                            </select>
+                            <label>Sorter</label>
+                        </div>
                         <button class="waves-effect waves-light btn-small" onclick="resetFilters()">
                             <i class="material-icons right">close</i>Nulstil alle filtre
                         </button>
+
+
+                        <!-- <button class="waves-effect waves-light btn-small" onclick="sortProductsByNameAsc()">
+                                <i class="material-icons right">filter</i>Sort by name
+                            </button> -->
                     </div>
                 </li>
             </ul>
@@ -150,7 +165,9 @@
         </div> -->
         <template id="productTemplate">
             <div class="col xl2 l4 m6 s12 product-img-container">
+
                 <div class="parent">
+                    <!-- <p class="product-info">##productInfoName##</p> -->
                     <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
                         data-img-name="##productImgName##" data-img-type="##productImgType##"
                         data-product-name="##productName##" data-product-description="##productDescription##"
@@ -354,10 +371,10 @@
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Our javascript -->
-    <script src="js/MainScript.min.js"></script>
-    <script src="js/Products.min.js"></script>
-    <!-- <script src="js/MainScript.js"></script>
-    <script src="js/Products.js"></script> -->
+    <!-- <script src="js/MainScript.min.js"></script>
+    <script src="js/Products.min.js"></script> -->
+    <script src="js/MainScript.js"></script>
+    <script src="js/Products.js"></script>
 </body>
 
 </html>

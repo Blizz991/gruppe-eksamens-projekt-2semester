@@ -260,6 +260,7 @@ $(document).ready(function () {
     $('.collapsible').collapsible({
         accordion: false
     });
+    $('select').formSelect();
 
     //#region Price range handler
     noUiSlider.create(slider, {
@@ -307,6 +308,25 @@ $(document).ready(function () {
         updateProductDisplay(currentFilters);
     });
     //#endregion Price range handler
+
+    $('#sortProductsSelect').change(function () {
+        switch (this.value) {
+            case "NameAsc":
+                sortProductsByNameAsc();
+                break;
+            case "NameDesc":
+                sortProductsByNameDesc();
+                break;
+            case "PriceAsc":
+                sortProductsByPriceAsc();
+                break;
+            case "PriceDesc":
+                sortProductsByPriceDesc();
+                break;
+            default:
+                break;
+        }
+    });
 
     //Initial product display
     displayProducts(products);
@@ -375,6 +395,7 @@ function displayProducts(filteredProducts) {
             }
             let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
             let newProduct = productTemplate.html()
+                // .replace('##productInfoName##', product.Name)
                 .replace('##productImgSrc##', imgPath)
                 .replace('##productImgName##', product.ImgName)
                 .replace('##productImgType##', product.ImgType)
@@ -383,7 +404,7 @@ function displayProducts(filteredProducts) {
                 .replace('##productName##', product.Name)
                 .replace('##productDescription##', product.Description)
                 .replace('##productPrice##', product.Price)
-                .replace('##productInfoPrice##',product.Price)
+                .replace('##productInfoPrice##', product.Price)
                 .replace('##productType##', productType);
             $(newProduct).prependTo($('#productsContainer'));
             index++
@@ -436,6 +457,26 @@ function resetFilters() {
     $('#productMinPrice').val(currentMinPrice);
     $('#productMaxPrice').val(currentMaxPrice);
 
+    updateProductDisplay(currentFilters);
+}
+
+function sortProductsByNameAsc() {
+    products = products.sort((a, b) => b.Name.localeCompare(a.Name));
+    updateProductDisplay(currentFilters);
+}
+
+function sortProductsByNameDesc() {
+    products = products.sort((a, b) => a.Name.localeCompare(b.Name));
+    updateProductDisplay(currentFilters);
+}
+
+function sortProductsByPriceAsc() {
+    products = products.sort((a, b) => b.Price - a.Price);
+    updateProductDisplay(currentFilters);
+}
+
+function sortProductsByPriceDesc() {
+    products = products.sort((a, b) => a.Price - b.Price);
     updateProductDisplay(currentFilters);
 }
 
