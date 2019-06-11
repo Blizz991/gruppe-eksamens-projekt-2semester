@@ -392,6 +392,23 @@ nav ul li.active {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+nav ul li a:hover{
+    color:#fff;
+}
+
+.sidenav li>a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+}
+
+.sidenav li.active,
+.sidenav li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .valign-wrapper {
     justify-content: center;
 }
