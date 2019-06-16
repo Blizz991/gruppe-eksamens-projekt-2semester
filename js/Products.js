@@ -55,7 +55,7 @@ function Product(Name, Description, Price, Type, ImgName, ImgType) {
 
 var products = [
     new Product(
-        "Tørklæde silke batik (Bangladesh)", //Name
+        "Tørklæde silke batik", //Name
         "Tørklæde, silke, batik, Bangladesh", //Description
         149, //Price
         "Scarf", //Type
@@ -63,7 +63,7 @@ var products = [
         "jpg" //ImgType
     ),
     new Product(
-        "Tørklæde af silke (Bangladesh",
+        "Tørklæde af silke",
         "Sjal, silke & bomuld, 72x228 cm., Bangladesh",
         185,
         "Scarf",
@@ -103,7 +103,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Måtte af kokosbast, hund (Bangladesh)",
+        "Måtte af kokosbast, hund",
         "Måtte af kokosbast, hund, 60x30 cm., fra Bangladesh",
         275,
         "Mat",
@@ -111,7 +111,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Måtte af kokosbast, flodhest (Bangladesh)",
+        "Måtte af kokosbast, flodhest",
         "Måtte af kokosbast, flodhest, 60x48 cm., Bangladesh",
         325,
         "Mat",
@@ -119,7 +119,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Måtte af kokosbast, kat (Bangladesh)",
+        "Måtte af kokosbast, kat",
         "Måtte af kokosbast, kat, 63x38 cm., Bangladesh",
         225,
         "Mat",
@@ -127,7 +127,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Måtte af kokosbast, gris (Bangladesh)",
+        "Måtte af kokosbast, gris",
         "Måtte af kokosbast, gris, 63x39 cm., Bangladesh",
         325,
         "Mat",
@@ -143,7 +143,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Slidstærk sommerfuglemåtte (Bangladesh)",
+        "Slidstærk sommerfuglemåtte",
         "Slidstærk måtte, kokosbast, Sommerfugl, div. farver, 60x32 cm., Bangladesh",
         185,
         "Mat",
@@ -199,7 +199,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Lille vasketøjskurv (Bangladesh)",
+        "Lille vasketøjskurv",
         "Lille vasketøjskurv, farvet Kaisa-græs + snor af bomuld, 30x34 cm., Bangladesh",
         269,
         "Basket",
@@ -223,7 +223,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Stribet kurv (Bangladesh)",
+        "Stribet kurv",
         "Stribet kurve af vævet jute, 27x27 cm., Bangladesh",
         149,
         "Basket",
@@ -239,7 +239,7 @@ var products = [
         "jpg"
     ),
     new Product(
-        "Zigzag kurv (Bangladesh)",
+        "Zigzag kurv",
         "Zigzag kurve af vævet jute, stor, 32x15 cm., Bangladesh",
         139,
         "Basket",
@@ -404,7 +404,7 @@ function displayProducts(filteredProducts) {
             }
             let imgPath = "images/products/256x256/" + product.ImgName + "_256x256." + product.ImgType;
             let newProduct = productTemplate.html()
-                // .replace('##productInfoName##', product.Name)
+                .replace('##productInfoName##', product.Name)
                 .replace('##productImgSrc##', imgPath)
                 .replace('##productImgName##', product.ImgName)
                 .replace('##productImgType##', product.ImgType)

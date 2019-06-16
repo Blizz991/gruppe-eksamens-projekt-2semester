@@ -67,31 +67,18 @@
                     <div class="collapsible-header"><i class="material-icons">filter_list</i>Filtre</div>
                     <div id="filterContainer" class="collapsible-body">
                         <div class="input-field">
-                            <input id="productSearch" type="search" data-filter="Query" onchange="applyFilters(this)">
+                            <input id="productSearch" type="search" data-filter="Query" onkeyup="applyFilters(this)">
                             <label for="productSearch">Søg</label>
                         </div>
-                        <!-- <div class="checkbox-container">
-                            <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="All"
-                                    checked="checked" onchange="applyFilters(this)" />
-                                <span>Vis alle</span>
-                            </label>
-                        </div> -->
                         <h6>Produkt Typer</h6>
+                        
                         <div class="checkbox-container">
-                            <label>
-                                <input id="" type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Scarf"
-                                    onchange="applyFilters(this)" />
-                                <span>Tørklæder</span>
-                            </label>
-                        </div>
-                        <div class="checkbox-container">
-                            <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Mat"
-                                    onchange="applyFilters(this)" />
-                                <span>Måtter</span>
-                            </label>
-                        </div>
+                                <label>
+                                    <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Basket"
+                                        onchange="applyFilters(this)" />
+                                    <span>Kurve</span>
+                                </label>
+                            </div>
                         <div class="checkbox-container">
                             <label>
                                 <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Hammock"
@@ -100,12 +87,19 @@
                             </label>
                         </div>
                         <div class="checkbox-container">
-                            <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Basket"
-                                    onchange="applyFilters(this)" />
-                                <span>Kurve</span>
-                            </label>
-                        </div>
+                                <label>
+                                    <input type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Mat"
+                                        onchange="applyFilters(this)" />
+                                    <span>Måtter</span>
+                                </label>
+                            </div>
+                        <div class="checkbox-container">
+                                <label>
+                                    <input id="" type="checkbox" class="filled-in checkbox-blue-grey" data-filter="Scarf"
+                                        onchange="applyFilters(this)" />
+                                    <span>Tørklæder</span>
+                                </label>
+                            </div>
                         <h6 class="mb-30">Pris mellem (kr.)</h6>
                         <form action="#">
                             <!-- <p class="range-field">
@@ -166,15 +160,13 @@
         </div> -->
         <template id="productTemplate">
             <div class="col xl2 l4 m6 s12 product-img-container">
-
                 <div class="parent">
-                    <!-- <p class="product-info">##productInfoName##</p> -->
                     <img src="##productImgSrc##" alt="##productImgAltText##" title="##productImgTitleText##"
                         data-img-name="##productImgName##" data-img-type="##productImgType##"
                         data-product-name="##productName##" data-product-description="##productDescription##"
                         data-product-price="##productPrice##" data-product-type="##productType##"
                         class="m-a d-flex modal-trigger responsive-img" width="256" data-target="productModal">
-                    <p class="product-info bottom-right-centered-content">##productInfoPrice## kr.</p>
+                    <p class="product-info bottom-right-centered-content">##productInfoName## ##productInfoPrice## kr.</p>
                 </div>
             </div>
         </template>
@@ -372,10 +364,10 @@
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Our javascript -->
-    <!-- <script src="js/MainScript.min.js"></script>
-    <script src="js/Products.min.js"></script> -->
-    <script src="js/MainScript.js"></script>
-    <script src="js/Products.js"></script>
+    <script src="js/MainScript.min.js"></script>
+    <script src="js/Products.min.js"></script>
+    <!-- <script src="js/MainScript.js"></script>
+    <script src="js/Products.js"></script> -->
 </body>
 
 </html>
