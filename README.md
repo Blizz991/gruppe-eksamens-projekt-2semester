@@ -10,3 +10,5 @@ Søs Wind (soswind)
 Sanne Lund Klüver (SanneKlyver)
 
 Martin Høite (Blizz991)
+
+Version 2 prototype: https://mdu.webxcellent.dk/eksamens-projekt-2-v2/index.html
