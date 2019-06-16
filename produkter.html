@@ -47,12 +47,16 @@
             </div>
         </nav>
     </header>
-    <ul class="sidenav menu" id="mobile-nav">
-        <li><a href="produkter.html">Produkter</a></li>
-        <li><a href="fair-forskelle.html">Fair trade</a></li>
-        <li><a href="om-os.html">Historie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
+    <ul class="sidenav menu green dark-3" id="mobile-nav">
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="produkter.html">Produkter</a></li>
+            <li><a href="fair-forskelle.html">Fair trade</a></li>
+            <li><a href="om-os.html">Om os</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#footerOpenTimesAnchor">Åbningstider</a></li>
+            <li><a href="index.html#newsletterMobileOnlyAnchor">Tilmeld nyhedsbrev</a></li>
+        </ul>
     <main class="row">
         <div class="col s12">
             <h2 class="m-0">Produkter</h2>
@@ -135,14 +139,9 @@
                             </select>
                             <label>Sorter</label>
                         </div>
-                        <button class="waves-effect waves-light btn-small" onclick="resetFilters()">
+                        <button class="waves-effect waves-light btn-small red" onclick="resetFilters()">
                             <i class="material-icons right">close</i>Nulstil alle filtre
                         </button>
-
-
-                        <!-- <button class="waves-effect waves-light btn-small" onclick="sortProductsByNameAsc()">
-                                <i class="material-icons right">filter</i>Sort by name
-                            </button> -->
                     </div>
                 </li>
             </ul>
@@ -209,7 +208,7 @@
         <div class="row">
             <div class="col xl5 l6 m12 s12">
                 <div class="col l6 m4 offset-m1 s8 offset-s2">
-                    <h4 class="white-text center-align">Åbningstider</h4>
+                        <h4 id="footerOpenTimesAnchor" class="white-text center-align">Åbningstider</h4>
                     <table class="footer__open-times table-responsive highlight center-align">
                         <tr>
                             <td>Mandag</td>
