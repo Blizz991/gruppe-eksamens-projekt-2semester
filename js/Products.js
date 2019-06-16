@@ -299,12 +299,14 @@ $(document).ready(function () {
     $('#productMinPrice').change(function () {
         currentMinPrice = this.value;
         slider.noUiSlider.set([this.value, currentMaxPrice]);
+        currentFilters.MinPrice = currentMinPrice;
         updateProductDisplay(currentFilters);
     });
 
     $('#productMaxPrice').change(function () {
         currentMaxPrice = this.value;
         slider.noUiSlider.set([currentMinPrice, this.value]);
+        currentFilters.MaxPrice = currentMaxPrice;
         updateProductDisplay(currentFilters);
     });
     //#endregion Price range handler
@@ -323,7 +325,14 @@ $(document).ready(function () {
             case "PriceDesc":
                 sortProductsByPriceDesc();
                 break;
+            case "TypeAsc":
+                sortProductsByTypeAsc();
+                break;
+            case "TypeDesc":
+                sortProductsByTypeDesc();
+                break;
             default:
+                displayProducts(currentFilters);
                 break;
         }
     });
@@ -456,6 +465,7 @@ function resetFilters() {
 
     $('#productMinPrice').val(currentMinPrice);
     $('#productMaxPrice').val(currentMaxPrice);
+    $('#sortProductsSelect').val($('sortProductsSelect option:first').val());
 
     updateProductDisplay(currentFilters);
 }
@@ -477,6 +487,16 @@ function sortProductsByPriceAsc() {
 
 function sortProductsByPriceDesc() {
     products = products.sort((a, b) => a.Price - b.Price);
+    updateProductDisplay(currentFilters);
+}
+
+function sortProductsByTypeAsc() {
+    products = products.sort((a, b) => b.Type.localeCompare(a.Type));
+    updateProductDisplay(currentFilters);
+}
+
+function sortProductsByTypeDesc() {
+    products = products.sort((a, b) => a.Type.localeCompare(b.Type));
     updateProductDisplay(currentFilters);
 }
 
